@@ -1,0 +1,244 @@
+{
+  "generated_at_utc": "2026-09-02T06:30:07.508534Z",
+  "model": "gpt-5-mini-2025-08-07",
+  "inference_mode": "normal OpenAI Responses API (store=false)",
+  "split": "validation",
+  "training_rows_used": 0,
+  "test_rows_used": 0,
+  "variants": [
+    "direct",
+    "behavioural_rubric",
+    "cautious_assessor"
+  ],
+  "ensemble": "equal untrained mean",
+  "candidates": {
+    "direct": {
+      "feature_count": null,
+      "validation_metrics": {
+        "macro_f1": 0.6415,
+        "macro_balanced_accuracy": 0.5394,
+        "macro_auroc": 0.6128,
+        "exact_match_accuracy": 0.0459,
+        "per_trait": {
+          "cEXT": {
+            "f1": 0.6374,
+            "balanced_accuracy": 0.57,
+            "auroc": 0.5788,
+            "positive_support": 192
+          },
+          "cNEU": {
+            "f1": 0.6641,
+            "balanced_accuracy": 0.5243,
+            "auroc": 0.634,
+            "positive_support": 185
+          },
+          "cAGR": {
+            "f1": 0.6906,
+            "balanced_accuracy": 0.5309,
+            "auroc": 0.6088,
+            "positive_support": 197
+          },
+          "cCON": {
+            "f1": 0.5333,
+            "balanced_accuracy": 0.5661,
+            "auroc": 0.5965,
+            "positive_support": 188
+          },
+          "cOPN": {
+            "f1": 0.6822,
+            "balanced_accuracy": 0.5058,
+            "auroc": 0.646,
+            "positive_support": 191
+          }
+        }
+      },
+      "model_settings": {
+        "type": "zero-shot, untrained",
+        "prompt": "direct"
+      }
+    },
+    "behavioural_rubric": {
+      "feature_count": null,
+      "validation_metrics": {
+        "macro_f1": 0.6331,
+        "macro_balanced_accuracy": 0.5421,
+        "macro_auroc": 0.6247,
+        "exact_match_accuracy": 0.0541,
+        "per_trait": {
+          "cEXT": {
+            "f1": 0.6378,
+            "balanced_accuracy": 0.564,
+            "auroc": 0.5914,
+            "positive_support": 192
+          },
+          "cNEU": {
+            "f1": 0.6654,
+            "balanced_accuracy": 0.5162,
+            "auroc": 0.6407,
+            "positive_support": 185
+          },
+          "cAGR": {
+            "f1": 0.6957,
+            "balanced_accuracy": 0.5393,
+            "auroc": 0.6097,
+            "positive_support": 197
+          },
+          "cCON": {
+            "f1": 0.4839,
+            "balanced_accuracy": 0.5703,
+            "auroc": 0.6177,
+            "positive_support": 188
+          },
+          "cOPN": {
+            "f1": 0.6827,
+            "balanced_accuracy": 0.5206,
+            "auroc": 0.6639,
+            "positive_support": 191
+          }
+        }
+      },
+      "model_settings": {
+        "type": "zero-shot, untrained",
+        "prompt": "behavioural_rubric"
+      }
+    },
+    "cautious_assessor": {
+      "feature_count": null,
+      "validation_metrics": {
+        "macro_f1": 0.6434,
+        "macro_balanced_accuracy": 0.5411,
+        "macro_auroc": 0.6169,
+        "exact_match_accuracy": 0.0459,
+        "per_trait": {
+          "cEXT": {
+            "f1": 0.6128,
+            "balanced_accuracy": 0.555,
+            "auroc": 0.5931,
+            "positive_support": 192
+          },
+          "cNEU": {
+            "f1": 0.655,
+            "balanced_accuracy": 0.5216,
+            "auroc": 0.6239,
+            "positive_support": 185
+          },
+          "cAGR": {
+            "f1": 0.6879,
+            "balanced_accuracy": 0.5219,
+            "auroc": 0.6106,
+            "positive_support": 197
+          },
+          "cCON": {
+            "f1": 0.573,
+            "balanced_accuracy": 0.59,
+            "auroc": 0.616,
+            "positive_support": 188
+          },
+          "cOPN": {
+            "f1": 0.6883,
+            "balanced_accuracy": 0.5168,
+            "auroc": 0.6408,
+            "positive_support": 191
+          }
+        }
+      },
+      "model_settings": {
+        "type": "zero-shot, untrained",
+        "prompt": "cautious_assessor"
+      }
+    },
+    "equal_weight_ensemble": {
+      "feature_count": null,
+      "validation_metrics": {
+        "macro_f1": 0.6201,
+        "macro_balanced_accuracy": 0.542,
+        "macro_auroc": 0.6295,
+        "exact_match_accuracy": 0.0486,
+        "per_trait": {
+          "cEXT": {
+            "f1": 0.6053,
+            "balanced_accuracy": 0.5559,
+            "auroc": 0.5959,
+            "positive_support": 192
+          },
+          "cNEU": {
+            "f1": 0.6512,
+            "balanced_accuracy": 0.5135,
+            "auroc": 0.6446,
+            "positive_support": 185
+          },
+          "cAGR": {
+            "f1": 0.695,
+            "balanced_accuracy": 0.5493,
+            "auroc": 0.6245,
+            "positive_support": 197
+          },
+          "cCON": {
+            "f1": 0.4651,
+            "balanced_accuracy": 0.568,
+            "auroc": 0.6178,
+            "positive_support": 188
+          },
+          "cOPN": {
+            "f1": 0.6839,
+            "balanced_accuracy": 0.5234,
+            "auroc": 0.6647,
+            "positive_support": 191
+          }
+        }
+      },
+      "model_settings": {
+        "type": "zero-shot, untrained",
+        "prompt": "equal_weight_ensemble"
+      }
+    },
+    "paper_zero_shot_piastra": {
+      "feature_count": null,
+      "validation_metrics": {
+        "macro_f1": 0.6183,
+        "macro_balanced_accuracy": 0.5604,
+        "macro_auroc": 0.6312,
+        "exact_match_accuracy": 0.0622,
+        "per_trait": {
+          "cEXT": {
+            "f1": 0.4721,
+            "balanced_accuracy": 0.5723,
+            "auroc": 0.6027,
+            "positive_support": 192
+          },
+          "cNEU": {
+            "f1": 0.6742,
+            "balanced_accuracy": 0.5324,
+            "auroc": 0.6278,
+            "positive_support": 185
+          },
+          "cAGR": {
+            "f1": 0.692,
+            "balanced_accuracy": 0.5634,
+            "auroc": 0.6304,
+            "positive_support": 197
+          },
+          "cCON": {
+            "f1": 0.5673,
+            "balanced_accuracy": 0.593,
+            "auroc": 0.6469,
+            "positive_support": 188
+          },
+          "cOPN": {
+            "f1": 0.6857,
+            "balanced_accuracy": 0.541,
+            "auroc": 0.648,
+            "positive_support": 191
+          }
+        }
+      },
+      "model_settings": {
+        "type": "paper-based zero-shot LLM benchmark"
+      }
+    }
+  },
+  "selected_candidate": "paper_zero_shot_piastra",
+  "selection_rule": "higher macro AUROC, then higher macro F1",
+  "scikit_learn_version": "1.7.2",
+  "python_version": "3.14.3"
+}

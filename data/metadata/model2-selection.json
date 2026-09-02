@@ -1,0 +1,71 @@
+{
+  "generated_at_utc": "2026-09-01T09:09:06.592804Z",
+  "selection_split": "validation",
+  "selection_rule": "lower aggregate MAE; lower aggregate RMSE breaks ties",
+  "selected_version": "linear",
+  "selected_validation_metrics": {
+    "mae": 0.282,
+    "rmse": 0.3517,
+    "r2": 0.6471,
+    "per_target": {
+      "bessi_self_management": {
+        "mae": 0.2961,
+        "rmse": 0.3536,
+        "r2": 0.605
+      },
+      "bessi_social_engagement": {
+        "mae": 0.3043,
+        "rmse": 0.373,
+        "r2": 0.6508
+      },
+      "bessi_cooperation": {
+        "mae": 0.2228,
+        "rmse": 0.2857,
+        "r2": 0.6593
+      },
+      "bessi_emotional_resilience": {
+        "mae": 0.2844,
+        "rmse": 0.375,
+        "r2": 0.7447
+      },
+      "bessi_innovation": {
+        "mae": 0.302,
+        "rmse": 0.3635,
+        "r2": 0.5759
+      }
+    }
+  },
+  "test_rows_used_once": 47,
+  "test_metrics": {
+    "mae": 0.336,
+    "rmse": 0.4055,
+    "r2": 0.5041,
+    "per_target": {
+      "bessi_self_management": {
+        "mae": 0.3206,
+        "rmse": 0.3759,
+        "r2": 0.5373
+      },
+      "bessi_social_engagement": {
+        "mae": 0.3713,
+        "rmse": 0.4545,
+        "r2": 0.486
+      },
+      "bessi_cooperation": {
+        "mae": 0.3111,
+        "rmse": 0.3769,
+        "r2": 0.4505
+      },
+      "bessi_emotional_resilience": {
+        "mae": 0.3173,
+        "rmse": 0.3954,
+        "r2": 0.5712
+      },
+      "bessi_innovation": {
+        "mae": 0.3597,
+        "rmse": 0.4192,
+        "r2": 0.4753
+      }
+    }
+  }
+}

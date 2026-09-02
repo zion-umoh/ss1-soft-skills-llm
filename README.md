@@ -66,6 +66,38 @@ Raw datasets are retained unchanged in `data/raw/`. Cleaned and model-ready file
 
 Current focus: **Model 1 dataset preparation using Essays and GoEmotions.**
 
+The Essays and GoEmotions datasets have reproducible schema-validation, cleaning, quality-audit and fixed-split pipelines. A text-only GoEmotions model has been trained with validation-calibrated thresholds, and its predicted emotion probabilities have been written for each Essays split. Next: train the Big Five model using Essays text and these emotion features.
+
+## Data preparation commands
+
+Run these from the repository root:
+
+```bash
+# Update the inventory of immutable raw CSV files.
+make audit-data
+
+# Monitor raw CSV files while working; the inventory refreshes after changes.
+make watch-data
+
+# Prepare the Essays audit artefacts and leakage-safe Model 1 splits.
+make prepare-essays
+
+# Prepare agreement-filtered GoEmotions artefacts and leakage-safe Model 1 splits.
+make prepare-goemotions
+
+# Create the project environment once before training models.
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+
+# Train the text-only GoEmotions model and write Essays emotion features.
+make train-goemotions
+
+# Run preparation-pipeline tests.
+make test
+```
+
+Generated data-quality reports and derived datasets are reproducible local artefacts; the source files and scripts remain in the repository.
+
 ## Expected deliverables
 
 - Validated scenario-design module

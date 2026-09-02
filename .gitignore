@@ -1,2 +1,17 @@
 # Downloaded datasets
 data/raw/
+
+# Reproducible derived datasets and local quality reports
+data/interim/
+data/processed/
+reports/data-quality/
+reports/model-evaluation/
+outputs/model-evaluation/
+outputs/models/
+.venv/
+
+# Local secrets
+.env
+
+# Python bytecode
+__pycache__/

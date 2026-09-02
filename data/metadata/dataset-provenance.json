@@ -1,0 +1,63 @@
+{
+  "datasets": [
+    {
+      "dataset_id": "essays",
+      "purpose": "Primary Model 1 dataset: written text with binary Big Five labels.",
+      "raw_paths": [
+        "data/raw/essays/essay_training.csv"
+      ],
+      "source": "Original stream-of-consciousness Essays corpus; the precise distributor of this local CSV has not yet been verified.",
+      "citation": "Pennebaker, J. W., & King, L. A. (1999). Linguistic styles: Language use as an individual difference. Journal of Personality and Social Psychology, 77(6), 1296–1312. https://doi.org/10.1037/0022-3514.77.6.1296",
+      "source_reference": "https://doi.org/10.1037/0022-3514.77.6.1296",
+      "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "licence_reference": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "downloaded_at": null,
+      "version": null,
+      "provenance_status": "distribution_and_licence_verification_pending",
+      "notes": "The original corpus citation is recorded. Verify the precise upstream distributor, applicable licence, download date and version of this local 2,467-row CSV before analysis or redistribution."
+    },
+    {
+      "dataset_id": "goemotions",
+      "purpose": "Emotion-recognition support dataset for Model 1; not a Big Five target dataset.",
+      "raw_paths": [
+        "data/raw/goemotions/goemotions_1.csv",
+        "data/raw/goemotions/goemotions_2.csv",
+        "data/raw/goemotions/goemotions_3.csv",
+        "data/raw/goemotions/official_splits/train.tsv",
+        "data/raw/goemotions/official_splits/validation.tsv",
+        "data/raw/goemotions/official_splits/test.tsv"
+      ],
+      "source": "Google Research GoEmotions full dataset",
+      "download_urls": [
+        "https://storage.googleapis.com/gresearch/goemotions/data/full_dataset/goemotions_1.csv",
+        "https://storage.googleapis.com/gresearch/goemotions/data/full_dataset/goemotions_2.csv",
+        "https://storage.googleapis.com/gresearch/goemotions/data/full_dataset/goemotions_3.csv",
+        "https://raw.githubusercontent.com/google-research/google-research/master/goemotions/data/train.tsv",
+        "https://raw.githubusercontent.com/google-research/google-research/master/goemotions/data/dev.tsv",
+        "https://raw.githubusercontent.com/google-research/google-research/master/goemotions/data/test.tsv"
+      ],
+      "citation": "Demszky et al. (2020), GoEmotions: A Dataset of Fine-Grained Emotions.",
+      "licence": null,
+      "downloaded_at": "2026-08-25 (CSV shards); 2026-08-27 (official split references)",
+      "version": "full_dataset CSV shards plus official agreement-filtered split references",
+      "provenance_status": "verified",
+      "notes": "The Google Research repository states that datasets in the repository are released under CC BY 4.0. Preserve attribution to the original paper."
+    },
+    {
+      "dataset_id": "bfi2_bessi_college_student_sample",
+      "purpose": "Model 2 dataset: BFI-2 domain-scale inputs and BESSI domain-scale soft-skill targets.",
+      "raw_paths": [
+        "data/raw/bfi2-bessi/College student sample.xlsx",
+        "data/raw/bfi2-bessi/BESSI automated scoring template.xlsx"
+      ],
+      "source": "Downloaded BFI-2/BESSI college student sample workbook; precise upstream distributor remains to be verified.",
+      "citation": null,
+      "source_reference": null,
+      "licence": null,
+      "downloaded_at": null,
+      "version": "BFI-2 and BESSI scores supplied in the downloaded workbook; exact release/version pending verification.",
+      "provenance_status": "source_licence_and_version_verification_pending",
+      "notes": "The workbook has 322 measurement rows. Its Case column is reused across rows with distinct values, so it must not be treated as a unique participant identifier."
+    }
+  ]
+}

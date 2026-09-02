@@ -1,0 +1,237 @@
+{
+  "generated_at_utc": "2026-09-01T10:57:34.712728Z",
+  "training_rows": 1727,
+  "validation_rows": 370,
+  "test_rows_used": 0,
+  "text_features": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.995,
+    "max_features": 100000,
+    "vocabulary_size": 90618
+  },
+  "emotion_feature_columns": [
+    "emotion_probability_admiration",
+    "emotion_probability_amusement",
+    "emotion_probability_anger",
+    "emotion_probability_annoyance",
+    "emotion_probability_approval",
+    "emotion_probability_caring",
+    "emotion_probability_confusion",
+    "emotion_probability_curiosity",
+    "emotion_probability_desire",
+    "emotion_probability_disappointment",
+    "emotion_probability_disapproval",
+    "emotion_probability_disgust",
+    "emotion_probability_embarrassment",
+    "emotion_probability_excitement",
+    "emotion_probability_fear",
+    "emotion_probability_gratitude",
+    "emotion_probability_grief",
+    "emotion_probability_joy",
+    "emotion_probability_love",
+    "emotion_probability_nervousness",
+    "emotion_probability_optimism",
+    "emotion_probability_pride",
+    "emotion_probability_realization",
+    "emotion_probability_relief",
+    "emotion_probability_remorse",
+    "emotion_probability_sadness",
+    "emotion_probability_surprise",
+    "emotion_probability_neutral"
+  ],
+  "candidates": {
+    "supervised_text_only": {
+      "feature_count": 90618,
+      "validation_metrics": {
+        "macro_f1": 0.5789,
+        "macro_balanced_accuracy": 0.5566,
+        "macro_auroc": 0.5763,
+        "exact_match_accuracy": 0.0486,
+        "per_trait": {
+          "cEXT": {
+            "f1": 0.6034,
+            "balanced_accuracy": 0.5561,
+            "auroc": 0.5554,
+            "positive_support": 192
+          },
+          "cNEU": {
+            "f1": 0.5464,
+            "balanced_accuracy": 0.5514,
+            "auroc": 0.569,
+            "positive_support": 185
+          },
+          "cAGR": {
+            "f1": 0.6024,
+            "balanced_accuracy": 0.5485,
+            "auroc": 0.5759,
+            "positive_support": 197
+          },
+          "cCON": {
+            "f1": 0.5503,
+            "balanced_accuracy": 0.5403,
+            "auroc": 0.5596,
+            "positive_support": 188
+          },
+          "cOPN": {
+            "f1": 0.592,
+            "balanced_accuracy": 0.5867,
+            "auroc": 0.6214,
+            "positive_support": 191
+          }
+        }
+      },
+      "model_settings": {
+        "base_estimator": "class-balanced SGDClassifier(loss=log_loss, average=True)",
+        "alpha": 1e-05,
+        "max_iter": 1000,
+        "random_seed": 42
+      }
+    },
+    "goemotions_only": {
+      "feature_count": 28,
+      "validation_metrics": {
+        "macro_f1": 0.5584,
+        "macro_balanced_accuracy": 0.5538,
+        "macro_auroc": 0.5716,
+        "exact_match_accuracy": 0.0514,
+        "per_trait": {
+          "cEXT": {
+            "f1": 0.5824,
+            "balanced_accuracy": 0.5906,
+            "auroc": 0.5865,
+            "positive_support": 192
+          },
+          "cNEU": {
+            "f1": 0.5637,
+            "balanced_accuracy": 0.5649,
+            "auroc": 0.5985,
+            "positive_support": 185
+          },
+          "cAGR": {
+            "f1": 0.5556,
+            "balanced_accuracy": 0.5468,
+            "auroc": 0.5592,
+            "positive_support": 197
+          },
+          "cCON": {
+            "f1": 0.5255,
+            "balanced_accuracy": 0.5216,
+            "auroc": 0.5615,
+            "positive_support": 188
+          },
+          "cOPN": {
+            "f1": 0.5648,
+            "balanced_accuracy": 0.5451,
+            "auroc": 0.5524,
+            "positive_support": 191
+          }
+        }
+      },
+      "model_settings": {
+        "base_estimator": "class-balanced SGDClassifier(loss=log_loss, average=True)",
+        "alpha": 1e-05,
+        "max_iter": 1000,
+        "random_seed": 42
+      }
+    },
+    "supervised_text_plus_goemotions": {
+      "feature_count": 90646,
+      "validation_metrics": {
+        "macro_f1": 0.5764,
+        "macro_balanced_accuracy": 0.5557,
+        "macro_auroc": 0.5899,
+        "exact_match_accuracy": 0.0432,
+        "per_trait": {
+          "cEXT": {
+            "f1": 0.6154,
+            "balanced_accuracy": 0.5637,
+            "auroc": 0.5876,
+            "positive_support": 192
+          },
+          "cNEU": {
+            "f1": 0.5606,
+            "balanced_accuracy": 0.5595,
+            "auroc": 0.6037,
+            "positive_support": 185
+          },
+          "cAGR": {
+            "f1": 0.5487,
+            "balanced_accuracy": 0.523,
+            "auroc": 0.5628,
+            "positive_support": 197
+          },
+          "cCON": {
+            "f1": 0.5567,
+            "balanced_accuracy": 0.5345,
+            "auroc": 0.5538,
+            "positive_support": 188
+          },
+          "cOPN": {
+            "f1": 0.6005,
+            "balanced_accuracy": 0.5977,
+            "auroc": 0.6417,
+            "positive_support": 191
+          }
+        }
+      },
+      "model_settings": {
+        "base_estimator": "class-balanced SGDClassifier(loss=log_loss, average=True)",
+        "alpha": 1e-05,
+        "max_iter": 1000,
+        "random_seed": 42
+      }
+    },
+    "paper_zero_shot_piastra": {
+      "feature_count": null,
+      "validation_metrics": {
+        "macro_f1": 0.6183,
+        "macro_balanced_accuracy": 0.5604,
+        "macro_auroc": 0.6312,
+        "exact_match_accuracy": 0.0622,
+        "per_trait": {
+          "cEXT": {
+            "f1": 0.4721,
+            "balanced_accuracy": 0.5723,
+            "auroc": 0.6027,
+            "positive_support": 192
+          },
+          "cNEU": {
+            "f1": 0.6742,
+            "balanced_accuracy": 0.5324,
+            "auroc": 0.6278,
+            "positive_support": 185
+          },
+          "cAGR": {
+            "f1": 0.692,
+            "balanced_accuracy": 0.5634,
+            "auroc": 0.6304,
+            "positive_support": 197
+          },
+          "cCON": {
+            "f1": 0.5673,
+            "balanced_accuracy": 0.593,
+            "auroc": 0.6469,
+            "positive_support": 188
+          },
+          "cOPN": {
+            "f1": 0.6857,
+            "balanced_accuracy": 0.541,
+            "auroc": 0.648,
+            "positive_support": 191
+          }
+        }
+      },
+      "model_settings": {
+        "type": "paper-based zero-shot LLM benchmark"
+      }
+    }
+  },
+  "selected_candidate": "paper_zero_shot_piastra",
+  "selection_rule": "higher macro AUROC, then higher macro F1",
+  "scikit_learn_version": "1.7.2",
+  "python_version": "3.14.3"
+}

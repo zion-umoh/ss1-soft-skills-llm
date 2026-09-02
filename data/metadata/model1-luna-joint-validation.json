@@ -1,0 +1,105 @@
+{
+  "generated_at_utc": "2026-09-02T07:27:00.285072Z",
+  "model": "gpt-5.6-luna",
+  "inference_mode": "normal OpenAI Responses API (store=false)",
+  "split": "validation",
+  "training_rows_used": 0,
+  "test_rows_used": 0,
+  "candidates": {
+    "luna_joint_continuous": {
+      "feature_count": null,
+      "validation_metrics": {
+        "macro_f1": 0.6476,
+        "macro_balanced_accuracy": 0.5523,
+        "macro_auroc": 0.6312,
+        "exact_match_accuracy": 0.0595,
+        "per_trait": {
+          "cEXT": {
+            "f1": 0.6842,
+            "balanced_accuracy": 0.5665,
+            "auroc": 0.6032,
+            "positive_support": 192
+          },
+          "cNEU": {
+            "f1": 0.6705,
+            "balanced_accuracy": 0.5405,
+            "auroc": 0.6383,
+            "positive_support": 185
+          },
+          "cAGR": {
+            "f1": 0.6733,
+            "balanced_accuracy": 0.5359,
+            "auroc": 0.6225,
+            "positive_support": 197
+          },
+          "cCON": {
+            "f1": 0.5305,
+            "balanced_accuracy": 0.5858,
+            "auroc": 0.629,
+            "positive_support": 188
+          },
+          "cOPN": {
+            "f1": 0.6794,
+            "balanced_accuracy": 0.533,
+            "auroc": 0.6632,
+            "positive_support": 191
+          }
+        }
+      },
+      "model_settings": {
+        "type": "zero-shot, untrained joint continuous Luna assessment",
+        "model": "gpt-5.6-luna",
+        "target": "continuous 0--10 Big Five trait level",
+        "score_decimals_for_metrics": 2
+      }
+    },
+    "paper_zero_shot_piastra": {
+      "feature_count": null,
+      "validation_metrics": {
+        "macro_f1": 0.6183,
+        "macro_balanced_accuracy": 0.5604,
+        "macro_auroc": 0.6312,
+        "exact_match_accuracy": 0.0622,
+        "per_trait": {
+          "cEXT": {
+            "f1": 0.4721,
+            "balanced_accuracy": 0.5723,
+            "auroc": 0.6027,
+            "positive_support": 192
+          },
+          "cNEU": {
+            "f1": 0.6742,
+            "balanced_accuracy": 0.5324,
+            "auroc": 0.6278,
+            "positive_support": 185
+          },
+          "cAGR": {
+            "f1": 0.692,
+            "balanced_accuracy": 0.5634,
+            "auroc": 0.6304,
+            "positive_support": 197
+          },
+          "cCON": {
+            "f1": 0.5673,
+            "balanced_accuracy": 0.593,
+            "auroc": 0.6469,
+            "positive_support": 188
+          },
+          "cOPN": {
+            "f1": 0.6857,
+            "balanced_accuracy": 0.541,
+            "auroc": 0.648,
+            "positive_support": 191
+          }
+        }
+      },
+      "model_settings": {
+        "type": "paper-based zero-shot LLM benchmark"
+      }
+    }
+  },
+  "selected_candidate": "luna_joint_continuous",
+  "selection_rule": "higher macro AUROC, then macro F1",
+  "scikit_learn_version": "1.7.2",
+  "python_version": "3.14.3"
+}

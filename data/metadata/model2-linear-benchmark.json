@@ -1,0 +1,59 @@
+{
+  "generated_at_utc": "2026-09-01T09:04:41.899933Z",
+  "benchmark": "transparent multi-output ordinary least squares linear regression",
+  "feature_columns": [
+    "big_five_extraversion",
+    "big_five_agreeableness",
+    "big_five_conscientiousness",
+    "big_five_negative_emotionality",
+    "big_five_open_mindedness"
+  ],
+  "target_columns": [
+    "bessi_self_management",
+    "bessi_social_engagement",
+    "bessi_cooperation",
+    "bessi_emotional_resilience",
+    "bessi_innovation"
+  ],
+  "training_rows": 219,
+  "validation_rows": 47,
+  "test_rows_used": 0,
+  "model_settings": {
+    "fit_intercept": true,
+    "positive": false
+  },
+  "validation_metrics": {
+    "mae": 0.282,
+    "rmse": 0.3517,
+    "r2": 0.6471,
+    "per_target": {
+      "bessi_self_management": {
+        "mae": 0.2961,
+        "rmse": 0.3536,
+        "r2": 0.605
+      },
+      "bessi_social_engagement": {
+        "mae": 0.3043,
+        "rmse": 0.373,
+        "r2": 0.6508
+      },
+      "bessi_cooperation": {
+        "mae": 0.2228,
+        "rmse": 0.2857,
+        "r2": 0.6593
+      },
+      "bessi_emotional_resilience": {
+        "mae": 0.2844,
+        "rmse": 0.375,
+        "r2": 0.7447
+      },
+      "bessi_innovation": {
+        "mae": 0.302,
+        "rmse": 0.3635,
+        "r2": 0.5759
+      }
+    }
+  },
+  "scikit_learn_version": "1.7.2",
+  "python_version": "3.14.3"
+}

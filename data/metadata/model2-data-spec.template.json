@@ -1,0 +1,61 @@
+{
+  "status": "prepared_with_nonunique_case_identifier_warning",
+  "dataset": {
+    "source": "Downloaded BFI-2/BESSI college student sample workbook; upstream source and licence still need to be recorded.",
+    "licence_or_permission": null,
+    "version": null,
+    "download_date": null,
+    "raw_files": [
+      "data/raw/bfi2-bessi/College student sample.xlsx",
+      "data/raw/bfi2-bessi/BESSI automated scoring template.xlsx"
+    ]
+  },
+  "participant_linkage": {
+    "layout": "one workbook, one row per measurement record",
+    "big_five_id_column": "Case",
+    "bessi_id_column": "Case",
+    "mapping_notes": "Case is reused across rows with different BFI-2 and BESSI values. It is not a globally unique participant identifier and cannot support participant-level splitting."
+  },
+  "big_five": {
+    "instrument": "BFI-2 (60 item responses plus supplied domain scores)",
+    "response_min": 1,
+    "response_max": 5,
+    "trait_score_columns": {
+      "extraversion": "BFI2_Extraversion",
+      "negative_emotionality": "BFI2_NegativeEmotionality",
+      "agreeableness": "BFI2_Agreeableness",
+      "conscientiousness": "BFI2_Conscientiousness",
+      "open_mindedness": "BFI2_OpenMindedness"
+    },
+    "item_columns": [],
+    "reverse_scored_items": []
+  },
+  "bessi": {
+    "instrument_version": "BESSI 192 item responses plus supplied domain scores; exact release/version pending provenance verification",
+    "response_min": 1,
+    "response_max": 5,
+    "selected_skills": [
+      "self_management",
+      "social_engagement",
+      "cooperation",
+      "emotional_resilience",
+      "innovation"
+    ],
+    "supplied_score_columns": {
+      "self_management": "BESSI_SelfManagementSkills",
+      "social_engagement": "BESSI_SocialEngagementSkills",
+      "cooperation": "BESSI_CooperationSkills",
+      "emotional_resilience": "BESSI_EmotionalResilienceSkills",
+      "innovation": "BESSI_InnovationSkills"
+    },
+    "item_columns_by_skill": {},
+    "reverse_scored_items": []
+  },
+  "split_policy": {
+    "unit": "row (pending a reliable unique participant identifier)",
+    "seed": 42,
+    "train_fraction": 0.7,
+    "validation_fraction": 0.15,
+    "test_fraction": 0.15
+  }
+}

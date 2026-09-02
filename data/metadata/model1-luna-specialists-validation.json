@@ -1,0 +1,104 @@
+{
+  "generated_at_utc": "2026-09-02T07:00:53.187307Z",
+  "model": "gpt-5.6-luna",
+  "inference_mode": "normal OpenAI Responses API (store=false)",
+  "split": "validation",
+  "training_rows_used": 0,
+  "test_rows_used": 0,
+  "candidates": {
+    "luna_trait_specialists": {
+      "feature_count": null,
+      "validation_metrics": {
+        "macro_f1": 0.5946,
+        "macro_balanced_accuracy": 0.5791,
+        "macro_auroc": 0.6226,
+        "exact_match_accuracy": 0.0811,
+        "per_trait": {
+          "cEXT": {
+            "f1": 0.686,
+            "balanced_accuracy": 0.5784,
+            "auroc": 0.6046,
+            "positive_support": 192
+          },
+          "cNEU": {
+            "f1": 0.6623,
+            "balanced_accuracy": 0.5784,
+            "auroc": 0.6378,
+            "positive_support": 185
+          },
+          "cAGR": {
+            "f1": 0.6389,
+            "balanced_accuracy": 0.5699,
+            "auroc": 0.5986,
+            "positive_support": 197
+          },
+          "cCON": {
+            "f1": 0.3516,
+            "balanced_accuracy": 0.5565,
+            "auroc": 0.6099,
+            "positive_support": 188
+          },
+          "cOPN": {
+            "f1": 0.6343,
+            "balanced_accuracy": 0.6123,
+            "auroc": 0.6621,
+            "positive_support": 191
+          }
+        }
+      },
+      "model_settings": {
+        "type": "zero-shot, untrained Luna trait specialists",
+        "model": "gpt-5.6-luna",
+        "target": "probability of high binary trait class"
+      }
+    },
+    "paper_zero_shot_piastra": {
+      "feature_count": null,
+      "validation_metrics": {
+        "macro_f1": 0.6183,
+        "macro_balanced_accuracy": 0.5604,
+        "macro_auroc": 0.6312,
+        "exact_match_accuracy": 0.0622,
+        "per_trait": {
+          "cEXT": {
+            "f1": 0.4721,
+            "balanced_accuracy": 0.5723,
+            "auroc": 0.6027,
+            "positive_support": 192
+          },
+          "cNEU": {
+            "f1": 0.6742,
+            "balanced_accuracy": 0.5324,
+            "auroc": 0.6278,
+            "positive_support": 185
+          },
+          "cAGR": {
+            "f1": 0.692,
+            "balanced_accuracy": 0.5634,
+            "auroc": 0.6304,
+            "positive_support": 197
+          },
+          "cCON": {
+            "f1": 0.5673,
+            "balanced_accuracy": 0.593,
+            "auroc": 0.6469,
+            "positive_support": 188
+          },
+          "cOPN": {
+            "f1": 0.6857,
+            "balanced_accuracy": 0.541,
+            "auroc": 0.648,
+            "positive_support": 191
+          }
+        }
+      },
+      "model_settings": {
+        "type": "paper-based zero-shot LLM benchmark"
+      }
+    }
+  },
+  "selected_candidate": "paper_zero_shot_piastra",
+  "selection_rule": "higher macro AUROC, then macro F1",
+  "scikit_learn_version": "1.7.2",
+  "python_version": "3.14.3"
+}
