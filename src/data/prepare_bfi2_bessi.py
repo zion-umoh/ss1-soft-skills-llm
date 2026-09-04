@@ -34,6 +34,23 @@ BFI2_COLUMNS = {
     "BFI2_NegativeEmotionality": "big_five_negative_emotionality",
     "BFI2_OpenMindedness": "big_five_open_mindedness",
 }
+BFI2_FACET_COLUMNS = {
+    "BFI2_E_Sociability": "big_five_extraversion_sociability",
+    "BFI2_E_Assertiveness": "big_five_extraversion_assertiveness",
+    "BFI2_E_EnergyLevel": "big_five_extraversion_energy_level",
+    "BFI2_A_Compassion": "big_five_agreeableness_compassion",
+    "BFI2_A_Respectfulness": "big_five_agreeableness_respectfulness",
+    "BFI2_A_Trust": "big_five_agreeableness_trust",
+    "BFI2_C_Organization": "big_five_conscientiousness_organization",
+    "BFI2_C_Productiveness": "big_five_conscientiousness_productiveness",
+    "BFI2_C_Responsibility": "big_five_conscientiousness_responsibility",
+    "BFI2_N_Anxiety": "big_five_negative_emotionality_anxiety",
+    "BFI2_N_Depression": "big_five_negative_emotionality_depression",
+    "BFI2_N_EmotionalVolatility": "big_five_negative_emotionality_emotional_volatility",
+    "BFI2_O_IntellectualCuriosity": "big_five_open_mindedness_intellectual_curiosity",
+    "BFI2_O_AestheticSensitivity": "big_five_open_mindedness_aesthetic_sensitivity",
+    "BFI2_O_CreativeImagination": "big_five_open_mindedness_creative_imagination",
+}
 BESSI_COLUMNS = {
     "BESSI_SelfManagementSkills": "bessi_self_management",
     "BESSI_SocialEngagementSkills": "bessi_social_engagement",
@@ -91,14 +108,16 @@ def write_csv(path: Path, fieldnames: Iterable[str], rows: Iterable[dict[str, ob
         writer.writerows(rows)
 
 
-def read_records(input_path: Path) -> tuple[list[dict[str, object]], list[dict[str, object]], dict[str, object]]:
+def read_records(
+    input_path: Path, feature_mapping: dict[str, str] = BFI2_COLUMNS
+) -> tuple[list[dict[str, object]], list[dict[str, object]], dict[str, object]]:
     workbook = load_workbook(input_path, read_only=True, data_only=True)
     if "College student sample" not in workbook.sheetnames:
         raise PreparationError("Workbook must contain a 'College student sample' worksheet.")
     worksheet = workbook["College student sample"]
     rows = worksheet.iter_rows(values_only=True)
     header = list(next(rows, ()))
-    expected_columns = (CASE_COLUMN, *BFI2_COLUMNS, *BESSI_COLUMNS)
+    expected_columns = (CASE_COLUMN, *feature_mapping, *BESSI_COLUMNS)
     missing_columns = [column for column in expected_columns if column not in header]
     if missing_columns:
         raise PreparationError(f"Workbook is missing required columns: {missing_columns}.")
@@ -115,7 +134,7 @@ def read_records(input_path: Path) -> tuple[list[dict[str, object]], list[dict[s
         source_cases.append(case_value)
         raw_features = {
             canonical: numeric_score(row[indices[source]], source, source_row)
-            for source, canonical in BFI2_COLUMNS.items()
+            for source, canonical in feature_mapping.items()
         }
         raw_targets = {
             canonical: numeric_score(row[indices[source]], source, source_row)
@@ -193,6 +212,8 @@ def make_summary(
     assignments: dict[str, list[dict[str, object]]],
     seed: int,
     ratios: dict[str, float],
+    feature_columns: tuple[str, ...],
+    feature_level: str,
 ) -> dict[str, object]:
     return {
         "dataset_id": "bfi2_bessi_college_student_sample",
@@ -207,7 +228,7 @@ def make_summary(
         },
         "participant_linkage": source_metadata["linkage"],
         "score_handling": {
-            "source": "precomputed BFI-2 and BESSI domain-scale columns supplied in the workbook",
+            "source": f"supplied BFI-2 {feature_level}-scale columns and BESSI domain-scale columns",
             "source_scale": "1--5",
             "feature_conversion": "BFI-2 features are transformed to unit interval with (score - 1) / 4.",
             "target_scale": "BESSI targets remain on the original 1--5 scale for interpretability.",
@@ -219,10 +240,11 @@ def make_summary(
             "split_unit": "row",
             "split_grouping": "No trustworthy unique participant identifier is available: the Case field is reused for distinct measurement rows, so the split is row-level.",
         },
-        "features": list(FEATURE_COLUMNS),
+        "features": list(feature_columns),
+        "feature_level": feature_level,
         "targets": list(TARGET_COLUMNS),
         "distributions": {
-            "features_unit_interval": distribution(records, FEATURE_COLUMNS),
+            "features_unit_interval": distribution(records, feature_columns),
             "targets_original_1_to_5": distribution(records, TARGET_COLUMNS),
         },
         "splits": {split: {"row_count": len(assignments[split])} for split in SPLITS},
@@ -240,7 +262,7 @@ def render_report(summary: dict[str, object]) -> str:
         "",
         f"- Raw source: `{summary['source_file']}`",
         f"- SHA-256: `{summary['source_sha256']}`",
-        "- BFI-2 inputs: supplied domain scores, mapped from 1--5 to 0--1 using `(score - 1) / 4`.",
+        f"- BFI-2 inputs: supplied {summary['feature_level']} scores, mapped from 1--5 to 0--1 using `(score - 1) / 4`.",
         "- BESSI targets: supplied domain scores retained on their original 1--5 scale.",
         f"- Random seed: `{policy['random_seed']}`; split ratios: `{policy['split_ratios']}`.",
         "",
@@ -301,15 +323,29 @@ def prepare(
     train_ratio: float = 0.70,
     validation_ratio: float = 0.15,
     test_ratio: float = 0.15,
+    feature_mapping: dict[str, str] = BFI2_COLUMNS,
+    feature_level: str = "domain",
 ) -> dict[str, object]:
     ratios = {"train": train_ratio, "validation": validation_ratio, "test": test_ratio}
     if any(value <= 0 for value in ratios.values()) or not math.isclose(sum(ratios.values()), 1.0):
         raise PreparationError("Split ratios must be positive and sum to 1.0.")
-    records, exclusions, source_metadata = read_records(input_path)
+    feature_columns = tuple(feature_mapping.values())
+    processed_columns = ("record_id", *feature_columns, *TARGET_COLUMNS, "split")
+    records, exclusions, source_metadata = read_records(input_path, feature_mapping)
     assignments = assign_splits(records, ratios, seed)
-    summary = make_summary(input_path, records, exclusions, source_metadata, assignments, seed, ratios)
+    summary = make_summary(
+        input_path,
+        records,
+        exclusions,
+        source_metadata,
+        assignments,
+        seed,
+        ratios,
+        feature_columns,
+        feature_level,
+    )
 
-    audit_columns = ("source_row_number", "source_case", *PROCESSED_COLUMNS)
+    audit_columns = ("source_row_number", "source_case", *processed_columns)
     write_csv(interim_dir / "bfi2_bessi_cleaned_audit.csv", audit_columns, records)
     write_csv(
         interim_dir / "bfi2_bessi_exclusions.csv",
@@ -319,8 +355,8 @@ def prepare(
     for split in SPLITS:
         write_csv(
             processed_dir / f"bfi2_bessi_{split}.csv",
-            PROCESSED_COLUMNS,
-            ({column: record[column] for column in PROCESSED_COLUMNS} for record in assignments[split]),
+            processed_columns,
+            ({column: record[column] for column in processed_columns} for record in assignments[split]),
         )
     summary_path.parent.mkdir(parents=True, exist_ok=True)
     summary_path.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")

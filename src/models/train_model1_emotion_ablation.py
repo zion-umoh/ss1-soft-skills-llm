@@ -122,8 +122,8 @@ def write_predictions(path: Path, record_ids: list[str], labels: np.ndarray, pro
             writer.writerow(row)
 
 
-def load_piastra_metrics(path: Path, record_ids: list[str], labels: np.ndarray) -> dict[str, object]:
-    """Score the completed paper benchmark on the same validation ranking metric."""
+def load_piastra_metrics(path: Path, record_ids: list[str], labels: np.ndarray, split: str = "validation") -> dict[str, object]:
+    """Score the completed paper benchmark on the requested ranking-evaluation split."""
     with path.open("r", encoding="utf-8", newline="") as stream:
         reader = csv.DictReader(stream)
         required = {RECORD_ID_COLUMN, "split", *[f"score_{trait}" for trait in TRAITS]}
@@ -131,8 +131,8 @@ def load_piastra_metrics(path: Path, record_ids: list[str], labels: np.ndarray) 
             raise TrainingError(f"{path} does not contain Piastra benchmark scores.")
         rows = list(reader)
     by_id = {row[RECORD_ID_COLUMN]: row for row in rows}
-    if len(by_id) != len(rows) or set(by_id) != set(record_ids) or any(row["split"] != "validation" for row in rows):
-        raise TrainingError(f"{path} does not align one-to-one with Essays validation IDs.")
+    if len(by_id) != len(rows) or set(by_id) != set(record_ids) or any(row["split"] != split for row in rows):
+        raise TrainingError(f"{path} does not align one-to-one with Essays {split} IDs.")
     try:
         probabilities = np.asarray([[float(by_id[record_id][f"score_{trait}"]) / 10 for trait in TRAITS] for record_id in record_ids])
     except ValueError as error:

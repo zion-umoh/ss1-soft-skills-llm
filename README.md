@@ -64,9 +64,7 @@ Raw datasets are retained unchanged in `data/raw/`. Cleaned and model-ready file
 
 ## Status
 
-Current focus: **Model 1 dataset preparation using Essays and GoEmotions.**
-
-The Essays and GoEmotions datasets have reproducible schema-validation, cleaning, quality-audit and fixed-split pipelines. A text-only GoEmotions model has been trained with validation-calibrated thresholds, and its predicted emotion probabilities have been written for each Essays split. Next: train the Big Five model using Essays text and these emotion features.
+Week 4 benchmarking is complete for both model stages. Model 1's locked Luna retrieval method matched the adapted Piastra-style zero-shot benchmark on test AUROC while improving fixed-threshold F1; Model 2 selected the linear benchmark over Extra Trees and has one-time held-out test results. See [Model 1 comparison](reports/model-evaluation/model1-comparison-report.md), [Model 2 comparison](reports/model-evaluation/model2-comparison-report.md), and the detailed [Model 1 benchmarking record](docs/model1-benchmarking-record.md).
 
 ## Data preparation commands
 

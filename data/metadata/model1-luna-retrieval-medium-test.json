@@ -1,0 +1,114 @@
+{
+  "generated_at_utc": "2026-09-03T11:04:31.223214Z",
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "medium",
+  "max_output_tokens": 512,
+  "inference_mode": "normal OpenAI Responses API (store=false)",
+  "split": "test",
+  "training_rows_used_as_retrieval_references": 1727,
+  "test_rows_used": 370,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "retrieved_examples_per_evaluation_essay": 3,
+  "retrieval_manifest": "outputs/model-evaluation/model1_luna_retrieval_medium_test_references.csv",
+  "conservative_estimate_usd": 0.6533,
+  "candidates": {
+    "luna_retrieval_medium_reasoning": {
+      "feature_count": null,
+      "test_metrics": {
+        "macro_f1": 0.6606,
+        "macro_balanced_accuracy": 0.5948,
+        "macro_auroc": 0.6559,
+        "exact_match_accuracy": 0.0649,
+        "per_trait": {
+          "cEXT": {
+            "f1": 0.6698,
+            "balanced_accuracy": 0.611,
+            "auroc": 0.6126,
+            "positive_support": 192
+          },
+          "cNEU": {
+            "f1": 0.6897,
+            "balanced_accuracy": 0.6108,
+            "auroc": 0.7105,
+            "positive_support": 185
+          },
+          "cAGR": {
+            "f1": 0.6681,
+            "balanced_accuracy": 0.56,
+            "auroc": 0.6134,
+            "positive_support": 197
+          },
+          "cCON": {
+            "f1": 0.626,
+            "balanced_accuracy": 0.6019,
+            "auroc": 0.6724,
+            "positive_support": 188
+          },
+          "cOPN": {
+            "f1": 0.6495,
+            "balanced_accuracy": 0.5901,
+            "auroc": 0.6707,
+            "positive_support": 191
+          }
+        }
+      },
+      "model_settings": {
+        "type": "retrieval-augmented few-shot, untrained joint continuous Luna assessment",
+        "model": "gpt-5.6-luna",
+        "reasoning_effort": "medium",
+        "max_output_tokens": 512,
+        "target": "continuous 0--10 Big Five trait level",
+        "retrieved_examples": 3,
+        "score_decimals_for_metrics": 2
+      }
+    },
+    "paper_zero_shot_piastra": {
+      "feature_count": null,
+      "model_settings": {
+        "type": "paper-based zero-shot LLM benchmark"
+      },
+      "test_metrics": {
+        "macro_f1": 0.6106,
+        "macro_balanced_accuracy": 0.5596,
+        "macro_auroc": 0.6542,
+        "exact_match_accuracy": 0.0432,
+        "per_trait": {
+          "cEXT": {
+            "f1": 0.4124,
+            "balanced_accuracy": 0.5467,
+            "auroc": 0.5933,
+            "positive_support": 192
+          },
+          "cNEU": {
+            "f1": 0.6844,
+            "balanced_accuracy": 0.5514,
+            "auroc": 0.7171,
+            "positive_support": 185
+          },
+          "cAGR": {
+            "f1": 0.668,
+            "balanced_accuracy": 0.5308,
+            "auroc": 0.5933,
+            "positive_support": 197
+          },
+          "cCON": {
+            "f1": 0.5977,
+            "balanced_accuracy": 0.6227,
+            "auroc": 0.6856,
+            "positive_support": 188
+          },
+          "cOPN": {
+            "f1": 0.6907,
+            "balanced_accuracy": 0.5463,
+            "auroc": 0.6817,
+            "positive_support": 191
+          }
+        }
+      }
+    }
+  },
+  "selected_candidate": "luna_retrieval_medium_reasoning",
+  "selection_rule": "model preselected on validation; test metrics reported once without test-based selection",
+  "scikit_learn_version": "1.7.2",
+  "python_version": "3.14.3"
+}

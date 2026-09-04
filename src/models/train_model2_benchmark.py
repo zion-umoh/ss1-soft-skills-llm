@@ -42,11 +42,13 @@ class TrainingError(ValueError):
     """Raised when a prepared Model 2 split violates the training contract."""
 
 
-def load_split(path: Path, expected_split: str) -> tuple[list[str], np.ndarray, np.ndarray]:
+def load_split(
+    path: Path, expected_split: str, feature_columns: tuple[str, ...] = FEATURE_COLUMNS
+) -> tuple[list[str], np.ndarray, np.ndarray]:
     """Load exactly the model-ready columns from one fixed Model 2 split."""
     with path.open("r", encoding="utf-8", newline="") as stream:
         reader = csv.DictReader(stream)
-        required = {RECORD_ID_COLUMN, "split", *FEATURE_COLUMNS, *TARGET_COLUMNS}
+        required = {RECORD_ID_COLUMN, "split", *feature_columns, *TARGET_COLUMNS}
         if not reader.fieldnames or not required.issubset(reader.fieldnames):
             raise TrainingError(f"{path} does not contain the expected Model 2 schema.")
         rows = list(reader)
@@ -55,7 +57,7 @@ def load_split(path: Path, expected_split: str) -> tuple[list[str], np.ndarray, 
     if any(row["split"] != expected_split for row in rows):
         raise TrainingError(f"{path} contains rows outside the {expected_split!r} split.")
     try:
-        features = np.asarray([[float(row[column]) for column in FEATURE_COLUMNS] for row in rows], dtype=float)
+        features = np.asarray([[float(row[column]) for column in feature_columns] for row in rows], dtype=float)
         targets = np.asarray([[float(row[column]) for column in TARGET_COLUMNS] for row in rows], dtype=float)
     except ValueError as error:
         raise TrainingError(f"{path} contains a non-numeric model value.") from error

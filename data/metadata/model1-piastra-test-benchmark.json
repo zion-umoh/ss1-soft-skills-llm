@@ -1,0 +1,48 @@
+{
+  "generated_at_utc": "2026-09-03T10:44:54.746376Z",
+  "benchmark_paper": "Piastra & Catellani (2025), doi:10.3389/frai.2025.1484260",
+  "api_model": "gpt-4.1",
+  "prompt_mode": "zero-shot independent text scoring",
+  "score_scale": "0-10",
+  "binary_positive_threshold": 5.0,
+  "split": "test",
+  "rows_scored": 370,
+  "metrics": {
+    "exact_match_accuracy": 0.0432,
+    "macro_f1": 0.6106,
+    "per_trait": {
+      "cEXT": {
+        "precision": 0.6061,
+        "recall": 0.3125,
+        "f1": 0.4124,
+        "support": 192
+      },
+      "cNEU": {
+        "precision": 0.5279,
+        "recall": 0.973,
+        "f1": 0.6844,
+        "support": 185
+      },
+      "cAGR": {
+        "precision": 0.5512,
+        "recall": 0.8477,
+        "f1": 0.668,
+        "support": 197
+      },
+      "cCON": {
+        "precision": 0.65,
+        "recall": 0.5532,
+        "f1": 0.5977,
+        "support": 188
+      },
+      "cOPN": {
+        "precision": 0.5417,
+        "recall": 0.9529,
+        "f1": 0.6907,
+        "support": 191
+      }
+    }
+  },
+  "scikit_learn_version": "1.7.2",
+  "python_version": "3.14.3"
+}

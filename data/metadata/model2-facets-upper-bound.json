@@ -1,0 +1,119 @@
+{
+  "generated_at_utc": "2026-09-04T06:49:51.350598Z",
+  "experiment_type": "observed-facet upper-bound diagnostic; not deployable with five-domain Model 1 outputs",
+  "feature_columns": [
+    "big_five_extraversion_sociability",
+    "big_five_extraversion_assertiveness",
+    "big_five_extraversion_energy_level",
+    "big_five_agreeableness_compassion",
+    "big_five_agreeableness_respectfulness",
+    "big_five_agreeableness_trust",
+    "big_five_conscientiousness_organization",
+    "big_five_conscientiousness_productiveness",
+    "big_five_conscientiousness_responsibility",
+    "big_five_negative_emotionality_anxiety",
+    "big_five_negative_emotionality_depression",
+    "big_five_negative_emotionality_emotional_volatility",
+    "big_five_open_mindedness_intellectual_curiosity",
+    "big_five_open_mindedness_aesthetic_sensitivity",
+    "big_five_open_mindedness_creative_imagination"
+  ],
+  "target_columns": [
+    "bessi_self_management",
+    "bessi_social_engagement",
+    "bessi_cooperation",
+    "bessi_emotional_resilience",
+    "bessi_innovation"
+  ],
+  "training_rows": 219,
+  "validation_rows": 47,
+  "test_rows_used": 0,
+  "model": "standardized multi-output Ridge regression",
+  "alpha_candidates": [
+    0.001,
+    0.0031622776601683794,
+    0.01,
+    0.03162277660168379,
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0,
+    31.622776601683793,
+    100.0,
+    316.22776601683796,
+    1000.0
+  ],
+  "cv_folds": 5,
+  "selected_alpha": 31.622776601683793,
+  "validation_metrics": {
+    "mae": 0.2836,
+    "rmse": 0.3476,
+    "r2": 0.6552,
+    "per_target": {
+      "bessi_self_management": {
+        "mae": 0.3171,
+        "rmse": 0.3593,
+        "r2": 0.5924
+      },
+      "bessi_social_engagement": {
+        "mae": 0.278,
+        "rmse": 0.3417,
+        "r2": 0.7069
+      },
+      "bessi_cooperation": {
+        "mae": 0.2322,
+        "rmse": 0.2908,
+        "r2": 0.6471
+      },
+      "bessi_emotional_resilience": {
+        "mae": 0.299,
+        "rmse": 0.3872,
+        "r2": 0.7278
+      },
+      "bessi_innovation": {
+        "mae": 0.2916,
+        "rmse": 0.3521,
+        "r2": 0.6021
+      }
+    }
+  },
+  "baseline_validation_metrics": {
+    "mae": 0.282,
+    "rmse": 0.3517,
+    "r2": 0.6471,
+    "per_target": {
+      "bessi_self_management": {
+        "mae": 0.2961,
+        "rmse": 0.3536,
+        "r2": 0.605
+      },
+      "bessi_social_engagement": {
+        "mae": 0.3043,
+        "rmse": 0.373,
+        "r2": 0.6508
+      },
+      "bessi_cooperation": {
+        "mae": 0.2228,
+        "rmse": 0.2857,
+        "r2": 0.6593
+      },
+      "bessi_emotional_resilience": {
+        "mae": 0.2844,
+        "rmse": 0.375,
+        "r2": 0.7447
+      },
+      "bessi_innovation": {
+        "mae": 0.302,
+        "rmse": 0.3635,
+        "r2": 0.5759
+      }
+    }
+  },
+  "mae_change_vs_baseline": 0.0016,
+  "rmse_change_vs_baseline": -0.0041,
+  "r2_change_vs_baseline": 0.0081,
+  "selection_decision": "not selected \u2014 aggregate validation MAE did not improve",
+  "scikit_learn_version": "1.7.2",
+  "python_version": "3.14.3"
+}
