@@ -1,4 +1,4 @@
-.PHONY: audit-data watch-data prepare-essays prepare-goemotions prepare-bfi2-bessi prepare-bfi2-bessi-facets train-goemotions train-model1-piastra train-model1-piastra-test train-model1-prompt-ensemble-prepare train-model1-prompt-ensemble-submit train-model1-prompt-ensemble-retry train-model1-prompt-ensemble-resubmit train-model1-prompt-ensemble-status train-model1-prompt-ensemble-collect train-model1-prompt-ensemble-direct train-model1-luna-specialists train-model1-luna-joint train-model1-luna-retrieval train-model1-luna-retrieval-medium train-model1-luna-retrieval-medium-test train-model1-luna-trait-balanced train-model1-local-pilot train-model1-local-validation train-model1-local-train train-model1-local-stacker train-model1-ablation train-model1-embeddings train-model2-benchmark train-model2-improved train-model2-facets evaluate-model2-selected test
+.PHONY: audit-data watch-data prepare-essays prepare-goemotions prepare-bfi2-bessi prepare-bfi2-bessi-facets scenarios generate-scenarios-demo train-goemotions train-model1-piastra train-model1-piastra-test train-model1-prompt-ensemble-prepare train-model1-prompt-ensemble-submit train-model1-prompt-ensemble-retry train-model1-prompt-ensemble-resubmit train-model1-prompt-ensemble-status train-model1-prompt-ensemble-collect train-model1-prompt-ensemble-direct train-model1-luna-specialists train-model1-luna-joint train-model1-luna-retrieval train-model1-luna-retrieval-medium train-model1-luna-retrieval-medium-test train-model1-luna-trait-balanced train-model1-local-pilot train-model1-local-validation train-model1-local-train train-model1-local-stacker train-model1-ablation train-model1-embeddings train-model2-benchmark train-model2-improved train-model2-facets evaluate-model2-selected test
 
 audit-data:
 	.venv/bin/python src/data/audit_raw_datasets.py
@@ -17,6 +17,12 @@ prepare-bfi2-bessi:
 
 prepare-bfi2-bessi-facets:
 	.venv/bin/python src/data/prepare_bfi2_bessi_facets.py
+
+generate-scenarios-demo:
+	.venv/bin/python -m src.scenarios.generate_scenarios --skills self_management,cooperation,innovation --delivery data/processed/scenarios/demo_scenario_instrument_delivery.csv --audit-bank data/processed/scenarios/demo_scenario_instrument_audit.csv --metadata data/metadata/scenario-instrument-pipeline-demo.json --report reports/scenario-design/demo-scenario-instrument-pipeline.md
+
+scenarios:
+	.venv/bin/python -m src.scenarios.generate_scenarios --interactive
 
 train-goemotions:
 	.venv/bin/python src/models/train_goemotions.py

@@ -60,7 +60,7 @@ The downloaded shards contain text, metadata and 27 emotion labels plus `neutral
 
 ## 4. Integrated assessment pipeline
 
-- [ ] Use the validated scenario instrument to collect a scenario text response.
+- [ ] Use the released scenario instrument to collect a scenario text response.
 - [ ] Apply the same locked feature-extraction process used by Model 1.
 - [ ] Infer the Big Five profile.
 - [ ] Pass the inferred profile to the Big Five-to-BESSI model.

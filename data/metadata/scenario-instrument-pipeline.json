@@ -1,0 +1,369 @@
+{
+  "pipeline_version": "4.0.0",
+  "status": "released",
+  "seed": 42,
+  "selected_skills": [
+    "self_management",
+    "emotional_resilience",
+    "innovation"
+  ],
+  "skill_lookup": [
+    {
+      "skill_id": "self_management",
+      "display_name": "Self-management",
+      "behavioural_indicators": [
+        "prioritises competing tasks",
+        "makes a workable plan",
+        "follows through on commitments"
+      ],
+      "design_rules": [
+        "include a time or resource constraint",
+        "require a concrete next action"
+      ]
+    },
+    {
+      "skill_id": "emotional_resilience",
+      "display_name": "Emotional resilience",
+      "behavioural_indicators": [
+        "pauses to assess a setback",
+        "chooses a constructive next step",
+        "seeks appropriate support when needed"
+      ],
+      "design_rules": [
+        "represent a manageable setback or uncertainty",
+        "ask about observable responses, not private emotion labels"
+      ]
+    },
+    {
+      "skill_id": "innovation",
+      "display_name": "Innovation",
+      "behavioural_indicators": [
+        "questions an unhelpful assumption",
+        "seeks useful information",
+        "tries and evaluates an alternative"
+      ],
+      "design_rules": [
+        "include a familiar approach that has a limitation",
+        "make exploration relevant to the shared goal"
+      ]
+    }
+  ],
+  "candidate_count": 9,
+  "selected_scenario_count": 6,
+  "scenarios_per_skill": 2,
+  "rejected_after_selection_count": 3,
+  "candidate_audit": [
+    {
+      "candidate": {
+        "candidate_id": "self_management-01",
+        "skill_id": "self_management",
+        "candidate_number": 1,
+        "context_key": "team_deadline",
+        "behavioural_indicators": [
+          "prioritises competing tasks",
+          "makes a workable plan",
+          "follows through on commitments"
+        ],
+        "text": "You are working with a project team two days before an agreed deadline. Your group needs to make progress on a shared goal. However, one part of the shared work is incomplete and the original plan cannot be finished as written. This affects the team, the person responsible for the missing work, and the person receiving the result. The immediate difficulty is prioritising competing tasks, making a workable plan, and keeping the shared commitment realistic.\n\nIn 80--170 words, describe what you would actually do first and what you would do next. Explain how you would communicate with the people involved and what information you would seek or use. There is no single correct answer.",
+        "revision": 0
+      },
+      "evaluation": {
+        "candidate_id": "self_management-01",
+        "skill_id": "self_management",
+        "context_key": "team_deadline",
+        "word_count": 113,
+        "rubric_scores": {
+          "target_skill_mapping": 2,
+          "behavioural_representativeness": 2,
+          "significant_judgement": 2,
+          "realistic_shared_context": 2,
+          "non_knowledge_focus": 2,
+          "clarity_and_accessibility": 2,
+          "non_keyed_response": 2
+        },
+        "total_score": 14,
+        "maximum_score": 14,
+        "passes_threshold": true
+      }
+    },
+    {
+      "candidate": {
+        "candidate_id": "self_management-02",
+        "skill_id": "self_management",
+        "candidate_number": 2,
+        "context_key": "service_handover",
+        "behavioural_indicators": [
+          "prioritises competing tasks",
+          "makes a workable plan",
+          "follows through on commitments"
+        ],
+        "text": "You are handling a busy service handover with colleagues. Your group needs to make progress on a shared goal. However, the available notes conflict and the colleague who prepared them cannot be reached. This affects the person waiting for an update, your colleagues, and the service team. The immediate difficulty is prioritising competing tasks, making a workable plan, and keeping the shared commitment realistic.\n\nIn 80--170 words, describe what you would actually do first and what you would do next. Explain how you would communicate with the people involved and what information you would seek or use. There is no single correct answer.",
+        "revision": 0
+      },
+      "evaluation": {
+        "candidate_id": "self_management-02",
+        "skill_id": "self_management",
+        "context_key": "service_handover",
+        "word_count": 102,
+        "rubric_scores": {
+          "target_skill_mapping": 2,
+          "behavioural_representativeness": 2,
+          "significant_judgement": 2,
+          "realistic_shared_context": 2,
+          "non_knowledge_focus": 2,
+          "clarity_and_accessibility": 2,
+          "non_keyed_response": 2
+        },
+        "total_score": 14,
+        "maximum_score": 14,
+        "passes_threshold": true
+      }
+    },
+    {
+      "candidate": {
+        "candidate_id": "self_management-03",
+        "skill_id": "self_management",
+        "candidate_number": 3,
+        "context_key": "community_event",
+        "behavioural_indicators": [
+          "prioritises competing tasks",
+          "makes a workable plan",
+          "follows through on commitments"
+        ],
+        "text": "You are helping in the hour before a community event. Your group needs to make progress on a shared goal. However, the planned venue becomes unavailable and volunteers disagree about the most practical alternative. This affects visitors, volunteers, and the venue coordinator. The immediate difficulty is prioritising competing tasks, making a workable plan, and keeping the shared commitment realistic.\n\nIn 80--170 words, describe what you would actually do first and what you would do next. Explain how you would communicate with the people involved and what information you would seek or use. There is no single correct answer.",
+        "revision": 0
+      },
+      "evaluation": {
+        "candidate_id": "self_management-03",
+        "skill_id": "self_management",
+        "context_key": "community_event",
+        "word_count": 97,
+        "rubric_scores": {
+          "target_skill_mapping": 2,
+          "behavioural_representativeness": 2,
+          "significant_judgement": 2,
+          "realistic_shared_context": 2,
+          "non_knowledge_focus": 2,
+          "clarity_and_accessibility": 2,
+          "non_keyed_response": 2
+        },
+        "total_score": 14,
+        "maximum_score": 14,
+        "passes_threshold": true
+      }
+    },
+    {
+      "candidate": {
+        "candidate_id": "emotional_resilience-01",
+        "skill_id": "emotional_resilience",
+        "candidate_number": 1,
+        "context_key": "shared_task",
+        "behavioural_indicators": [
+          "pauses to assess a setback",
+          "chooses a constructive next step",
+          "seeks appropriate support when needed"
+        ],
+        "text": "You are working on a shared task with people who have different availability. Your group needs to make progress on a shared goal. However, one person asks to postpone their part even though the group must decide what to do today. This affects the group members and people affected by the task. The immediate difficulty is responding constructively to an unexpected setback, choosing a constructive next step, and seeking appropriate support when needed.\n\nIn 80--170 words, describe what you would actually do first and what you would do next. Explain how you would communicate with the people involved and what information you would seek or use. There is no single correct answer.",
+        "revision": 0
+      },
+      "evaluation": {
+        "candidate_id": "emotional_resilience-01",
+        "skill_id": "emotional_resilience",
+        "context_key": "shared_task",
+        "word_count": 111,
+        "rubric_scores": {
+          "target_skill_mapping": 2,
+          "behavioural_representativeness": 2,
+          "significant_judgement": 2,
+          "realistic_shared_context": 2,
+          "non_knowledge_focus": 2,
+          "clarity_and_accessibility": 2,
+          "non_keyed_response": 2
+        },
+        "total_score": 14,
+        "maximum_score": 14,
+        "passes_threshold": true
+      }
+    },
+    {
+      "candidate": {
+        "candidate_id": "emotional_resilience-02",
+        "skill_id": "emotional_resilience",
+        "candidate_number": 2,
+        "context_key": "process_review",
+        "behavioural_indicators": [
+          "pauses to assess a setback",
+          "chooses a constructive next step",
+          "seeks appropriate support when needed"
+        ],
+        "text": "You are taking part in a team review of a recurring process. Your group needs to make progress on a shared goal. However, the familiar method has caused avoidable problems, but changing it would require time and agreement. This affects your team and people affected by the work. The immediate difficulty is responding constructively to an unexpected setback, choosing a constructive next step, and seeking appropriate support when needed.\n\nIn 80--170 words, describe what you would actually do first and what you would do next. Explain how you would communicate with the people involved and what information you would seek or use. There is no single correct answer.",
+        "revision": 0
+      },
+      "evaluation": {
+        "candidate_id": "emotional_resilience-02",
+        "skill_id": "emotional_resilience",
+        "context_key": "process_review",
+        "word_count": 107,
+        "rubric_scores": {
+          "target_skill_mapping": 2,
+          "behavioural_representativeness": 2,
+          "significant_judgement": 2,
+          "realistic_shared_context": 2,
+          "non_knowledge_focus": 2,
+          "clarity_and_accessibility": 2,
+          "non_keyed_response": 2
+        },
+        "total_score": 14,
+        "maximum_score": 14,
+        "passes_threshold": true
+      }
+    },
+    {
+      "candidate": {
+        "candidate_id": "emotional_resilience-03",
+        "skill_id": "emotional_resilience",
+        "candidate_number": 3,
+        "context_key": "group_decision",
+        "behavioural_indicators": [
+          "pauses to assess a setback",
+          "chooses a constructive next step",
+          "seeks appropriate support when needed"
+        ],
+        "text": "You are joining a planning meeting with differing priorities. Your group needs to make progress on a shared goal. However, two reasonable proposals compete for the same limited time and resources. This affects the people proposing each option and the wider group. The immediate difficulty is responding constructively to an unexpected setback, choosing a constructive next step, and seeking appropriate support when needed.\n\nIn 80--170 words, describe what you would actually do first and what you would do next. Explain how you would communicate with the people involved and what information you would seek or use. There is no single correct answer.",
+        "revision": 0
+      },
+      "evaluation": {
+        "candidate_id": "emotional_resilience-03",
+        "skill_id": "emotional_resilience",
+        "context_key": "group_decision",
+        "word_count": 101,
+        "rubric_scores": {
+          "target_skill_mapping": 2,
+          "behavioural_representativeness": 2,
+          "significant_judgement": 2,
+          "realistic_shared_context": 2,
+          "non_knowledge_focus": 2,
+          "clarity_and_accessibility": 2,
+          "non_keyed_response": 2
+        },
+        "total_score": 14,
+        "maximum_score": 14,
+        "passes_threshold": true
+      }
+    },
+    {
+      "candidate": {
+        "candidate_id": "innovation-01",
+        "skill_id": "innovation",
+        "candidate_number": 1,
+        "context_key": "team_deadline",
+        "behavioural_indicators": [
+          "questions an unhelpful assumption",
+          "seeks useful information",
+          "tries and evaluates an alternative"
+        ],
+        "text": "You are working with a project team two days before an agreed deadline. Your group needs to make progress on a shared goal. However, one part of the shared work is incomplete and the original plan cannot be finished as written. This affects the team, the person responsible for the missing work, and the person receiving the result. The immediate difficulty is questioning an unhelpful assumption, investigating an alternative, and evaluating an approach that is not working well.\n\nIn 80--170 words, describe what you would actually do first and what you would do next. Explain how you would communicate with the people involved and what information you would seek or use. There is no single correct answer.",
+        "revision": 0
+      },
+      "evaluation": {
+        "candidate_id": "innovation-01",
+        "skill_id": "innovation",
+        "context_key": "team_deadline",
+        "word_count": 116,
+        "rubric_scores": {
+          "target_skill_mapping": 2,
+          "behavioural_representativeness": 2,
+          "significant_judgement": 2,
+          "realistic_shared_context": 2,
+          "non_knowledge_focus": 2,
+          "clarity_and_accessibility": 2,
+          "non_keyed_response": 2
+        },
+        "total_score": 14,
+        "maximum_score": 14,
+        "passes_threshold": true
+      }
+    },
+    {
+      "candidate": {
+        "candidate_id": "innovation-02",
+        "skill_id": "innovation",
+        "candidate_number": 2,
+        "context_key": "service_handover",
+        "behavioural_indicators": [
+          "questions an unhelpful assumption",
+          "seeks useful information",
+          "tries and evaluates an alternative"
+        ],
+        "text": "You are handling a busy service handover with colleagues. Your group needs to make progress on a shared goal. However, the available notes conflict and the colleague who prepared them cannot be reached. This affects the person waiting for an update, your colleagues, and the service team. The immediate difficulty is questioning an unhelpful assumption, investigating an alternative, and evaluating an approach that is not working well.\n\nIn 80--170 words, describe what you would actually do first and what you would do next. Explain how you would communicate with the people involved and what information you would seek or use. There is no single correct answer.",
+        "revision": 0
+      },
+      "evaluation": {
+        "candidate_id": "innovation-02",
+        "skill_id": "innovation",
+        "context_key": "service_handover",
+        "word_count": 105,
+        "rubric_scores": {
+          "target_skill_mapping": 2,
+          "behavioural_representativeness": 2,
+          "significant_judgement": 2,
+          "realistic_shared_context": 2,
+          "non_knowledge_focus": 2,
+          "clarity_and_accessibility": 2,
+          "non_keyed_response": 2
+        },
+        "total_score": 14,
+        "maximum_score": 14,
+        "passes_threshold": true
+      }
+    },
+    {
+      "candidate": {
+        "candidate_id": "innovation-03",
+        "skill_id": "innovation",
+        "candidate_number": 3,
+        "context_key": "community_event",
+        "behavioural_indicators": [
+          "questions an unhelpful assumption",
+          "seeks useful information",
+          "tries and evaluates an alternative"
+        ],
+        "text": "You are helping in the hour before a community event. Your group needs to make progress on a shared goal. However, the planned venue becomes unavailable and volunteers disagree about the most practical alternative. This affects visitors, volunteers, and the venue coordinator. The immediate difficulty is questioning an unhelpful assumption, investigating an alternative, and evaluating an approach that is not working well.\n\nIn 80--170 words, describe what you would actually do first and what you would do next. Explain how you would communicate with the people involved and what information you would seek or use. There is no single correct answer.",
+        "revision": 0
+      },
+      "evaluation": {
+        "candidate_id": "innovation-03",
+        "skill_id": "innovation",
+        "context_key": "community_event",
+        "word_count": 100,
+        "rubric_scores": {
+          "target_skill_mapping": 2,
+          "behavioural_representativeness": 2,
+          "significant_judgement": 2,
+          "realistic_shared_context": 2,
+          "non_knowledge_focus": 2,
+          "clarity_and_accessibility": 2,
+          "non_keyed_response": 2
+        },
+        "total_score": 14,
+        "maximum_score": 14,
+        "passes_threshold": true
+      }
+    }
+  ],
+  "release_gate": {
+    "selection_scope_valid": true,
+    "participant_burden_within_cap": true,
+    "balanced_skill_coverage": true,
+    "all_selected_pass_rubric": true,
+    "selected_texts_unique": true,
+    "no_unselected_skill_in_instrument": true
+  },
+  "meets_release_gate": true,
+  "evaluation_scope": "deterministic content pre-screen; no participant responses, Model 1 calls, Model 2 calls, or held-out benchmark data used",
+  "generated_at_utc": "2026-09-08T08:34:25.701788Z",
+  "delivery_path": "data/processed/scenarios/scenario_instrument_delivery.csv",
+  "delivery_sha256": "a967da939967baad772a414bcf09c212879ff26b09f3afa6df41cc112642ed68",
+  "audit_bank_path": "data/processed/scenarios/scenario_instrument_audit.csv",
+  "audit_bank_sha256": "2ed6eb718871764857c238887be75827f01568d6f6c7d8099d1a224eef0ab4d4"
+}

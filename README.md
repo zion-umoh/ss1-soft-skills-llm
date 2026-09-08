@@ -10,7 +10,7 @@ The project uses only existing public or anonymised secondary datasets. It does 
 
 ## Research pipeline
 
-1. **Scenario design** — generate and evaluate scenario-based questions that elicit behavioural and emotional information.
+1. **Scenario design** — generate and evaluate scenario-based questions that elicit observable soft-skill behaviour.
 2. **Model 1: text to Big Five** — predict Big Five personality traits from written text using semantic, emotion and emotion-regulation features.
 3. **Model 2: Big Five to BESSI skills** — predict selected BESSI soft-skill outcomes from Big Five personality inputs.
 4. **Integration and evaluation** — connect the two models and report performance, limitations and appropriate use boundaries.
@@ -66,6 +66,8 @@ Raw datasets are retained unchanged in `data/raw/`. Cleaned and model-ready file
 
 Week 4 benchmarking is complete for both model stages. Model 1's locked Luna retrieval method matched the adapted Piastra-style zero-shot benchmark on test AUROC while improving fixed-threshold F1; Model 2 selected the linear benchmark over Extra Trees and has one-time held-out test results. See [Model 1 comparison](reports/model-evaluation/model1-comparison-report.md), [Model 2 comparison](reports/model-evaluation/model2-comparison-report.md), and the detailed [Model 1 benchmarking record](docs/model1-benchmarking-record.md).
 
+Week 5 adds a curated, user-selected scenario-instrument pipeline: a mapped scenario bank generates candidates, a literature-based rubric evaluates them, weak candidates receive one deterministic revision, and only a balanced passing instrument is released. It does not alter either locked model or establish psychometric validity. See [the scenario methodology and release gate](docs/scenario-instrument-pipeline.md).
+
 ## Data preparation commands
 
 Run these from the repository root:
@@ -90,6 +92,13 @@ python3 -m venv .venv
 # Train the text-only GoEmotions model and write Essays emotion features.
 make train-goemotions
 
+# Build the fixed three-skill reference instrument.
+# Demo outputs use `demo_` filenames and never overwrite live-named audit files.
+make generate-scenarios-demo
+
+# Build a selected-skill instrument interactively from the curated bank.
+make scenarios
+
 # Run preparation-pipeline tests.
 make test
 ```
@@ -98,7 +107,7 @@ Generated data-quality reports and derived datasets are reproducible local artef
 
 ## Expected deliverables
 
-- Validated scenario-design module
+- Released scenario-design module with a reproducible content pre-screen
 - Model 1 personality-prediction results
 - Model 2 soft-skill-prediction results
 - Integrated pipeline and final evaluation
