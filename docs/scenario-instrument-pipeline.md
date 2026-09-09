@@ -46,3 +46,11 @@ Demo outputs are prefixed with `demo_` and do not overwrite live-named audit fil
 ## Scope boundary
 
 This module ends at automated content pre-screening and release. It does not collect participant responses, perform psychometric analysis, or connect scenario responses to the locked Model 1 and Model 2 stages.
+
+## Planned external benchmark
+
+The primary external benchmark candidate is Rubat du Mérac, Botta and Lupo (2026), *Extending the Validation of the 3SQ to Higher Education: Factor Structure and Reliability in a Large Italian University Sample* ([paper and full text](https://www.ledonline.it/index.php/ECPS-Journal/article/view/7879), [DOI](https://doi.org/10.7358/ecps-2026-033-mera)). The Soft Skills Self-evaluation Questionnaire (3SQ) uses 41 five-point Likert items and reports ten soft-skill dimensions: self-confidence, curiosity, resilience, openness, collaboration, empathy, leadership, commitment, autonomy, and problem-solving. The study collected data from 2,130 university students in 2024–2025 and tested the established ten-factor structure with confirmatory factor analysis.
+
+This is an external outcome benchmark, not a requirement that the comparator use the same input or algorithm. The planned comparison is within-participant: the same participants complete the released scenario instrument and the 3SQ, then our predicted scores are compared with the mapped 3SQ scores. The initial crosswalk is self-management → commitment/autonomy, cooperation → collaboration, emotional resilience → resilience, innovation → curiosity/problem-solving, and social engagement → openness/empathy/leadership. The last mapping is exploratory and must not be treated as a direct scale equivalence without justification.
+
+The comparison will use per-skill rank/linear association, error metrics, agreement estimates, and confidence intervals. Synthetic response fixtures may test the software connection but cannot serve as benchmark ground truth. Because the 3SQ measures self-perceived skills, agreement with it is external criterion/convergent evidence rather than direct observation of behaviour; language, population, and administration differences must be reported.

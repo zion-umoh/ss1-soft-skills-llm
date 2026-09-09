@@ -1,0 +1,7 @@
+scenario_id,delivery_order,text
+self_management-fixture-01,1,"A deadline has moved forward and two important tasks now compete for your attention. What would you do first, and how would you communicate the revised plan?"
+self_management-fixture-02,2,"A colleague is unavailable during a busy handover and the notes are incomplete. What would you do to keep the work on track?"
+cooperation-fixture-01,3,"A teammate asks to postpone their part while the group must decide what to do today. How would you respond to the different needs?"
+cooperation-fixture-02,4,"A familiar team process is causing avoidable problems, but changing it requires agreement. How would you discuss and test a fair alternative?"
+innovation-fixture-01,5,"A project plan is no longer working as expected. How would you question the assumption, explore an alternative, and evaluate it?"
+innovation-fixture-02,6,"A handover contains conflicting notes and the usual approach is blocked. What information would you seek and what alternative would you try?"

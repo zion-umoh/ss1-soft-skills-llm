@@ -1,0 +1,8 @@
+{
+  "status": "released",
+  "meets_release_gate": true,
+  "pipeline_version": "4.0.0-fixture",
+  "selected_skills": ["self_management", "cooperation", "innovation"],
+  "selected_scenario_count": 6,
+  "delivery_sha256": "9f431495cdc5e50b0a8bc53a5c22c548cd23cfc8cefb9a6f38515ea11fa12930"
+}
