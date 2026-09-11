@@ -1,0 +1,1773 @@
+{
+  "generated_at_utc": "2026-09-11T11:18:22.494176Z",
+  "status": "completed",
+  "protocol": {
+    "raw_audio_input": false,
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "llm_feature_extractor": "gpt-5.6-luna structured observable-text features",
+    "llm_feature_columns": [
+      "emotional_expressiveness",
+      "positive_affect",
+      "negative_affect",
+      "social_orientation",
+      "assertiveness",
+      "certainty",
+      "cognitive_complexity",
+      "response_elaboration",
+      "interpersonal_warmth",
+      "question_relevance"
+    ],
+    "speech_embedding_model": "microsoft/wavlm-base-plus",
+    "speech_embedding_columns": [
+      "speech_embedding_000",
+      "speech_embedding_001",
+      "speech_embedding_002",
+      "speech_embedding_003",
+      "speech_embedding_004",
+      "speech_embedding_005",
+      "speech_embedding_006",
+      "speech_embedding_007",
+      "speech_embedding_008",
+      "speech_embedding_009",
+      "speech_embedding_010",
+      "speech_embedding_011",
+      "speech_embedding_012",
+      "speech_embedding_013",
+      "speech_embedding_014",
+      "speech_embedding_015",
+      "speech_embedding_016",
+      "speech_embedding_017",
+      "speech_embedding_018",
+      "speech_embedding_019",
+      "speech_embedding_020",
+      "speech_embedding_021",
+      "speech_embedding_022",
+      "speech_embedding_023",
+      "speech_embedding_024",
+      "speech_embedding_025",
+      "speech_embedding_026",
+      "speech_embedding_027",
+      "speech_embedding_028",
+      "speech_embedding_029",
+      "speech_embedding_030",
+      "speech_embedding_031",
+      "speech_embedding_032",
+      "speech_embedding_033",
+      "speech_embedding_034",
+      "speech_embedding_035",
+      "speech_embedding_036",
+      "speech_embedding_037",
+      "speech_embedding_038",
+      "speech_embedding_039",
+      "speech_embedding_040",
+      "speech_embedding_041",
+      "speech_embedding_042",
+      "speech_embedding_043",
+      "speech_embedding_044",
+      "speech_embedding_045",
+      "speech_embedding_046",
+      "speech_embedding_047",
+      "speech_embedding_048",
+      "speech_embedding_049",
+      "speech_embedding_050",
+      "speech_embedding_051",
+      "speech_embedding_052",
+      "speech_embedding_053",
+      "speech_embedding_054",
+      "speech_embedding_055",
+      "speech_embedding_056",
+      "speech_embedding_057",
+      "speech_embedding_058",
+      "speech_embedding_059",
+      "speech_embedding_060",
+      "speech_embedding_061",
+      "speech_embedding_062",
+      "speech_embedding_063",
+      "speech_embedding_064",
+      "speech_embedding_065",
+      "speech_embedding_066",
+      "speech_embedding_067",
+      "speech_embedding_068",
+      "speech_embedding_069",
+      "speech_embedding_070",
+      "speech_embedding_071",
+      "speech_embedding_072",
+      "speech_embedding_073",
+      "speech_embedding_074",
+      "speech_embedding_075",
+      "speech_embedding_076",
+      "speech_embedding_077",
+      "speech_embedding_078",
+      "speech_embedding_079",
+      "speech_embedding_080",
+      "speech_embedding_081",
+      "speech_embedding_082",
+      "speech_embedding_083",
+      "speech_embedding_084",
+      "speech_embedding_085",
+      "speech_embedding_086",
+      "speech_embedding_087",
+      "speech_embedding_088",
+      "speech_embedding_089",
+      "speech_embedding_090",
+      "speech_embedding_091",
+      "speech_embedding_092",
+      "speech_embedding_093",
+      "speech_embedding_094",
+      "speech_embedding_095",
+      "speech_embedding_096",
+      "speech_embedding_097",
+      "speech_embedding_098",
+      "speech_embedding_099",
+      "speech_embedding_100",
+      "speech_embedding_101",
+      "speech_embedding_102",
+      "speech_embedding_103",
+      "speech_embedding_104",
+      "speech_embedding_105",
+      "speech_embedding_106",
+      "speech_embedding_107",
+      "speech_embedding_108",
+      "speech_embedding_109",
+      "speech_embedding_110",
+      "speech_embedding_111",
+      "speech_embedding_112",
+      "speech_embedding_113",
+      "speech_embedding_114",
+      "speech_embedding_115",
+      "speech_embedding_116",
+      "speech_embedding_117",
+      "speech_embedding_118",
+      "speech_embedding_119",
+      "speech_embedding_120",
+      "speech_embedding_121",
+      "speech_embedding_122",
+      "speech_embedding_123",
+      "speech_embedding_124",
+      "speech_embedding_125",
+      "speech_embedding_126",
+      "speech_embedding_127",
+      "speech_embedding_128",
+      "speech_embedding_129",
+      "speech_embedding_130",
+      "speech_embedding_131",
+      "speech_embedding_132",
+      "speech_embedding_133",
+      "speech_embedding_134",
+      "speech_embedding_135",
+      "speech_embedding_136",
+      "speech_embedding_137",
+      "speech_embedding_138",
+      "speech_embedding_139",
+      "speech_embedding_140",
+      "speech_embedding_141",
+      "speech_embedding_142",
+      "speech_embedding_143",
+      "speech_embedding_144",
+      "speech_embedding_145",
+      "speech_embedding_146",
+      "speech_embedding_147",
+      "speech_embedding_148",
+      "speech_embedding_149",
+      "speech_embedding_150",
+      "speech_embedding_151",
+      "speech_embedding_152",
+      "speech_embedding_153",
+      "speech_embedding_154",
+      "speech_embedding_155",
+      "speech_embedding_156",
+      "speech_embedding_157",
+      "speech_embedding_158",
+      "speech_embedding_159",
+      "speech_embedding_160",
+      "speech_embedding_161",
+      "speech_embedding_162",
+      "speech_embedding_163",
+      "speech_embedding_164",
+      "speech_embedding_165",
+      "speech_embedding_166",
+      "speech_embedding_167",
+      "speech_embedding_168",
+      "speech_embedding_169",
+      "speech_embedding_170",
+      "speech_embedding_171",
+      "speech_embedding_172",
+      "speech_embedding_173",
+      "speech_embedding_174",
+      "speech_embedding_175",
+      "speech_embedding_176",
+      "speech_embedding_177",
+      "speech_embedding_178",
+      "speech_embedding_179",
+      "speech_embedding_180",
+      "speech_embedding_181",
+      "speech_embedding_182",
+      "speech_embedding_183",
+      "speech_embedding_184",
+      "speech_embedding_185",
+      "speech_embedding_186",
+      "speech_embedding_187",
+      "speech_embedding_188",
+      "speech_embedding_189",
+      "speech_embedding_190",
+      "speech_embedding_191",
+      "speech_embedding_192",
+      "speech_embedding_193",
+      "speech_embedding_194",
+      "speech_embedding_195",
+      "speech_embedding_196",
+      "speech_embedding_197",
+      "speech_embedding_198",
+      "speech_embedding_199",
+      "speech_embedding_200",
+      "speech_embedding_201",
+      "speech_embedding_202",
+      "speech_embedding_203",
+      "speech_embedding_204",
+      "speech_embedding_205",
+      "speech_embedding_206",
+      "speech_embedding_207",
+      "speech_embedding_208",
+      "speech_embedding_209",
+      "speech_embedding_210",
+      "speech_embedding_211",
+      "speech_embedding_212",
+      "speech_embedding_213",
+      "speech_embedding_214",
+      "speech_embedding_215",
+      "speech_embedding_216",
+      "speech_embedding_217",
+      "speech_embedding_218",
+      "speech_embedding_219",
+      "speech_embedding_220",
+      "speech_embedding_221",
+      "speech_embedding_222",
+      "speech_embedding_223",
+      "speech_embedding_224",
+      "speech_embedding_225",
+      "speech_embedding_226",
+      "speech_embedding_227",
+      "speech_embedding_228",
+      "speech_embedding_229",
+      "speech_embedding_230",
+      "speech_embedding_231",
+      "speech_embedding_232",
+      "speech_embedding_233",
+      "speech_embedding_234",
+      "speech_embedding_235",
+      "speech_embedding_236",
+      "speech_embedding_237",
+      "speech_embedding_238",
+      "speech_embedding_239",
+      "speech_embedding_240",
+      "speech_embedding_241",
+      "speech_embedding_242",
+      "speech_embedding_243",
+      "speech_embedding_244",
+      "speech_embedding_245",
+      "speech_embedding_246",
+      "speech_embedding_247",
+      "speech_embedding_248",
+      "speech_embedding_249",
+      "speech_embedding_250",
+      "speech_embedding_251",
+      "speech_embedding_252",
+      "speech_embedding_253",
+      "speech_embedding_254",
+      "speech_embedding_255",
+      "speech_embedding_256",
+      "speech_embedding_257",
+      "speech_embedding_258",
+      "speech_embedding_259",
+      "speech_embedding_260",
+      "speech_embedding_261",
+      "speech_embedding_262",
+      "speech_embedding_263",
+      "speech_embedding_264",
+      "speech_embedding_265",
+      "speech_embedding_266",
+      "speech_embedding_267",
+      "speech_embedding_268",
+      "speech_embedding_269",
+      "speech_embedding_270",
+      "speech_embedding_271",
+      "speech_embedding_272",
+      "speech_embedding_273",
+      "speech_embedding_274",
+      "speech_embedding_275",
+      "speech_embedding_276",
+      "speech_embedding_277",
+      "speech_embedding_278",
+      "speech_embedding_279",
+      "speech_embedding_280",
+      "speech_embedding_281",
+      "speech_embedding_282",
+      "speech_embedding_283",
+      "speech_embedding_284",
+      "speech_embedding_285",
+      "speech_embedding_286",
+      "speech_embedding_287",
+      "speech_embedding_288",
+      "speech_embedding_289",
+      "speech_embedding_290",
+      "speech_embedding_291",
+      "speech_embedding_292",
+      "speech_embedding_293",
+      "speech_embedding_294",
+      "speech_embedding_295",
+      "speech_embedding_296",
+      "speech_embedding_297",
+      "speech_embedding_298",
+      "speech_embedding_299",
+      "speech_embedding_300",
+      "speech_embedding_301",
+      "speech_embedding_302",
+      "speech_embedding_303",
+      "speech_embedding_304",
+      "speech_embedding_305",
+      "speech_embedding_306",
+      "speech_embedding_307",
+      "speech_embedding_308",
+      "speech_embedding_309",
+      "speech_embedding_310",
+      "speech_embedding_311",
+      "speech_embedding_312",
+      "speech_embedding_313",
+      "speech_embedding_314",
+      "speech_embedding_315",
+      "speech_embedding_316",
+      "speech_embedding_317",
+      "speech_embedding_318",
+      "speech_embedding_319",
+      "speech_embedding_320",
+      "speech_embedding_321",
+      "speech_embedding_322",
+      "speech_embedding_323",
+      "speech_embedding_324",
+      "speech_embedding_325",
+      "speech_embedding_326",
+      "speech_embedding_327",
+      "speech_embedding_328",
+      "speech_embedding_329",
+      "speech_embedding_330",
+      "speech_embedding_331",
+      "speech_embedding_332",
+      "speech_embedding_333",
+      "speech_embedding_334",
+      "speech_embedding_335",
+      "speech_embedding_336",
+      "speech_embedding_337",
+      "speech_embedding_338",
+      "speech_embedding_339",
+      "speech_embedding_340",
+      "speech_embedding_341",
+      "speech_embedding_342",
+      "speech_embedding_343",
+      "speech_embedding_344",
+      "speech_embedding_345",
+      "speech_embedding_346",
+      "speech_embedding_347",
+      "speech_embedding_348",
+      "speech_embedding_349",
+      "speech_embedding_350",
+      "speech_embedding_351",
+      "speech_embedding_352",
+      "speech_embedding_353",
+      "speech_embedding_354",
+      "speech_embedding_355",
+      "speech_embedding_356",
+      "speech_embedding_357",
+      "speech_embedding_358",
+      "speech_embedding_359",
+      "speech_embedding_360",
+      "speech_embedding_361",
+      "speech_embedding_362",
+      "speech_embedding_363",
+      "speech_embedding_364",
+      "speech_embedding_365",
+      "speech_embedding_366",
+      "speech_embedding_367",
+      "speech_embedding_368",
+      "speech_embedding_369",
+      "speech_embedding_370",
+      "speech_embedding_371",
+      "speech_embedding_372",
+      "speech_embedding_373",
+      "speech_embedding_374",
+      "speech_embedding_375",
+      "speech_embedding_376",
+      "speech_embedding_377",
+      "speech_embedding_378",
+      "speech_embedding_379",
+      "speech_embedding_380",
+      "speech_embedding_381",
+      "speech_embedding_382",
+      "speech_embedding_383",
+      "speech_embedding_384",
+      "speech_embedding_385",
+      "speech_embedding_386",
+      "speech_embedding_387",
+      "speech_embedding_388",
+      "speech_embedding_389",
+      "speech_embedding_390",
+      "speech_embedding_391",
+      "speech_embedding_392",
+      "speech_embedding_393",
+      "speech_embedding_394",
+      "speech_embedding_395",
+      "speech_embedding_396",
+      "speech_embedding_397",
+      "speech_embedding_398",
+      "speech_embedding_399",
+      "speech_embedding_400",
+      "speech_embedding_401",
+      "speech_embedding_402",
+      "speech_embedding_403",
+      "speech_embedding_404",
+      "speech_embedding_405",
+      "speech_embedding_406",
+      "speech_embedding_407",
+      "speech_embedding_408",
+      "speech_embedding_409",
+      "speech_embedding_410",
+      "speech_embedding_411",
+      "speech_embedding_412",
+      "speech_embedding_413",
+      "speech_embedding_414",
+      "speech_embedding_415",
+      "speech_embedding_416",
+      "speech_embedding_417",
+      "speech_embedding_418",
+      "speech_embedding_419",
+      "speech_embedding_420",
+      "speech_embedding_421",
+      "speech_embedding_422",
+      "speech_embedding_423",
+      "speech_embedding_424",
+      "speech_embedding_425",
+      "speech_embedding_426",
+      "speech_embedding_427",
+      "speech_embedding_428",
+      "speech_embedding_429",
+      "speech_embedding_430",
+      "speech_embedding_431",
+      "speech_embedding_432",
+      "speech_embedding_433",
+      "speech_embedding_434",
+      "speech_embedding_435",
+      "speech_embedding_436",
+      "speech_embedding_437",
+      "speech_embedding_438",
+      "speech_embedding_439",
+      "speech_embedding_440",
+      "speech_embedding_441",
+      "speech_embedding_442",
+      "speech_embedding_443",
+      "speech_embedding_444",
+      "speech_embedding_445",
+      "speech_embedding_446",
+      "speech_embedding_447",
+      "speech_embedding_448",
+      "speech_embedding_449",
+      "speech_embedding_450",
+      "speech_embedding_451",
+      "speech_embedding_452",
+      "speech_embedding_453",
+      "speech_embedding_454",
+      "speech_embedding_455",
+      "speech_embedding_456",
+      "speech_embedding_457",
+      "speech_embedding_458",
+      "speech_embedding_459",
+      "speech_embedding_460",
+      "speech_embedding_461",
+      "speech_embedding_462",
+      "speech_embedding_463",
+      "speech_embedding_464",
+      "speech_embedding_465",
+      "speech_embedding_466",
+      "speech_embedding_467",
+      "speech_embedding_468",
+      "speech_embedding_469",
+      "speech_embedding_470",
+      "speech_embedding_471",
+      "speech_embedding_472",
+      "speech_embedding_473",
+      "speech_embedding_474",
+      "speech_embedding_475",
+      "speech_embedding_476",
+      "speech_embedding_477",
+      "speech_embedding_478",
+      "speech_embedding_479",
+      "speech_embedding_480",
+      "speech_embedding_481",
+      "speech_embedding_482",
+      "speech_embedding_483",
+      "speech_embedding_484",
+      "speech_embedding_485",
+      "speech_embedding_486",
+      "speech_embedding_487",
+      "speech_embedding_488",
+      "speech_embedding_489",
+      "speech_embedding_490",
+      "speech_embedding_491",
+      "speech_embedding_492",
+      "speech_embedding_493",
+      "speech_embedding_494",
+      "speech_embedding_495",
+      "speech_embedding_496",
+      "speech_embedding_497",
+      "speech_embedding_498",
+      "speech_embedding_499",
+      "speech_embedding_500",
+      "speech_embedding_501",
+      "speech_embedding_502",
+      "speech_embedding_503",
+      "speech_embedding_504",
+      "speech_embedding_505",
+      "speech_embedding_506",
+      "speech_embedding_507",
+      "speech_embedding_508",
+      "speech_embedding_509",
+      "speech_embedding_510",
+      "speech_embedding_511",
+      "speech_embedding_512",
+      "speech_embedding_513",
+      "speech_embedding_514",
+      "speech_embedding_515",
+      "speech_embedding_516",
+      "speech_embedding_517",
+      "speech_embedding_518",
+      "speech_embedding_519",
+      "speech_embedding_520",
+      "speech_embedding_521",
+      "speech_embedding_522",
+      "speech_embedding_523",
+      "speech_embedding_524",
+      "speech_embedding_525",
+      "speech_embedding_526",
+      "speech_embedding_527",
+      "speech_embedding_528",
+      "speech_embedding_529",
+      "speech_embedding_530",
+      "speech_embedding_531",
+      "speech_embedding_532",
+      "speech_embedding_533",
+      "speech_embedding_534",
+      "speech_embedding_535",
+      "speech_embedding_536",
+      "speech_embedding_537",
+      "speech_embedding_538",
+      "speech_embedding_539",
+      "speech_embedding_540",
+      "speech_embedding_541",
+      "speech_embedding_542",
+      "speech_embedding_543",
+      "speech_embedding_544",
+      "speech_embedding_545",
+      "speech_embedding_546",
+      "speech_embedding_547",
+      "speech_embedding_548",
+      "speech_embedding_549",
+      "speech_embedding_550",
+      "speech_embedding_551",
+      "speech_embedding_552",
+      "speech_embedding_553",
+      "speech_embedding_554",
+      "speech_embedding_555",
+      "speech_embedding_556",
+      "speech_embedding_557",
+      "speech_embedding_558",
+      "speech_embedding_559",
+      "speech_embedding_560",
+      "speech_embedding_561",
+      "speech_embedding_562",
+      "speech_embedding_563",
+      "speech_embedding_564",
+      "speech_embedding_565",
+      "speech_embedding_566",
+      "speech_embedding_567",
+      "speech_embedding_568",
+      "speech_embedding_569",
+      "speech_embedding_570",
+      "speech_embedding_571",
+      "speech_embedding_572",
+      "speech_embedding_573",
+      "speech_embedding_574",
+      "speech_embedding_575",
+      "speech_embedding_576",
+      "speech_embedding_577",
+      "speech_embedding_578",
+      "speech_embedding_579",
+      "speech_embedding_580",
+      "speech_embedding_581",
+      "speech_embedding_582",
+      "speech_embedding_583",
+      "speech_embedding_584",
+      "speech_embedding_585",
+      "speech_embedding_586",
+      "speech_embedding_587",
+      "speech_embedding_588",
+      "speech_embedding_589",
+      "speech_embedding_590",
+      "speech_embedding_591",
+      "speech_embedding_592",
+      "speech_embedding_593",
+      "speech_embedding_594",
+      "speech_embedding_595",
+      "speech_embedding_596",
+      "speech_embedding_597",
+      "speech_embedding_598",
+      "speech_embedding_599",
+      "speech_embedding_600",
+      "speech_embedding_601",
+      "speech_embedding_602",
+      "speech_embedding_603",
+      "speech_embedding_604",
+      "speech_embedding_605",
+      "speech_embedding_606",
+      "speech_embedding_607",
+      "speech_embedding_608",
+      "speech_embedding_609",
+      "speech_embedding_610",
+      "speech_embedding_611",
+      "speech_embedding_612",
+      "speech_embedding_613",
+      "speech_embedding_614",
+      "speech_embedding_615",
+      "speech_embedding_616",
+      "speech_embedding_617",
+      "speech_embedding_618",
+      "speech_embedding_619",
+      "speech_embedding_620",
+      "speech_embedding_621",
+      "speech_embedding_622",
+      "speech_embedding_623",
+      "speech_embedding_624",
+      "speech_embedding_625",
+      "speech_embedding_626",
+      "speech_embedding_627",
+      "speech_embedding_628",
+      "speech_embedding_629",
+      "speech_embedding_630",
+      "speech_embedding_631",
+      "speech_embedding_632",
+      "speech_embedding_633",
+      "speech_embedding_634",
+      "speech_embedding_635",
+      "speech_embedding_636",
+      "speech_embedding_637",
+      "speech_embedding_638",
+      "speech_embedding_639",
+      "speech_embedding_640",
+      "speech_embedding_641",
+      "speech_embedding_642",
+      "speech_embedding_643",
+      "speech_embedding_644",
+      "speech_embedding_645",
+      "speech_embedding_646",
+      "speech_embedding_647",
+      "speech_embedding_648",
+      "speech_embedding_649",
+      "speech_embedding_650",
+      "speech_embedding_651",
+      "speech_embedding_652",
+      "speech_embedding_653",
+      "speech_embedding_654",
+      "speech_embedding_655",
+      "speech_embedding_656",
+      "speech_embedding_657",
+      "speech_embedding_658",
+      "speech_embedding_659",
+      "speech_embedding_660",
+      "speech_embedding_661",
+      "speech_embedding_662",
+      "speech_embedding_663",
+      "speech_embedding_664",
+      "speech_embedding_665",
+      "speech_embedding_666",
+      "speech_embedding_667",
+      "speech_embedding_668",
+      "speech_embedding_669",
+      "speech_embedding_670",
+      "speech_embedding_671",
+      "speech_embedding_672",
+      "speech_embedding_673",
+      "speech_embedding_674",
+      "speech_embedding_675",
+      "speech_embedding_676",
+      "speech_embedding_677",
+      "speech_embedding_678",
+      "speech_embedding_679",
+      "speech_embedding_680",
+      "speech_embedding_681",
+      "speech_embedding_682",
+      "speech_embedding_683",
+      "speech_embedding_684",
+      "speech_embedding_685",
+      "speech_embedding_686",
+      "speech_embedding_687",
+      "speech_embedding_688",
+      "speech_embedding_689",
+      "speech_embedding_690",
+      "speech_embedding_691",
+      "speech_embedding_692",
+      "speech_embedding_693",
+      "speech_embedding_694",
+      "speech_embedding_695",
+      "speech_embedding_696",
+      "speech_embedding_697",
+      "speech_embedding_698",
+      "speech_embedding_699",
+      "speech_embedding_700",
+      "speech_embedding_701",
+      "speech_embedding_702",
+      "speech_embedding_703",
+      "speech_embedding_704",
+      "speech_embedding_705",
+      "speech_embedding_706",
+      "speech_embedding_707",
+      "speech_embedding_708",
+      "speech_embedding_709",
+      "speech_embedding_710",
+      "speech_embedding_711",
+      "speech_embedding_712",
+      "speech_embedding_713",
+      "speech_embedding_714",
+      "speech_embedding_715",
+      "speech_embedding_716",
+      "speech_embedding_717",
+      "speech_embedding_718",
+      "speech_embedding_719",
+      "speech_embedding_720",
+      "speech_embedding_721",
+      "speech_embedding_722",
+      "speech_embedding_723",
+      "speech_embedding_724",
+      "speech_embedding_725",
+      "speech_embedding_726",
+      "speech_embedding_727",
+      "speech_embedding_728",
+      "speech_embedding_729",
+      "speech_embedding_730",
+      "speech_embedding_731",
+      "speech_embedding_732",
+      "speech_embedding_733",
+      "speech_embedding_734",
+      "speech_embedding_735",
+      "speech_embedding_736",
+      "speech_embedding_737",
+      "speech_embedding_738",
+      "speech_embedding_739",
+      "speech_embedding_740",
+      "speech_embedding_741",
+      "speech_embedding_742",
+      "speech_embedding_743",
+      "speech_embedding_744",
+      "speech_embedding_745",
+      "speech_embedding_746",
+      "speech_embedding_747",
+      "speech_embedding_748",
+      "speech_embedding_749",
+      "speech_embedding_750",
+      "speech_embedding_751",
+      "speech_embedding_752",
+      "speech_embedding_753",
+      "speech_embedding_754",
+      "speech_embedding_755",
+      "speech_embedding_756",
+      "speech_embedding_757",
+      "speech_embedding_758",
+      "speech_embedding_759",
+      "speech_embedding_760",
+      "speech_embedding_761",
+      "speech_embedding_762",
+      "speech_embedding_763",
+      "speech_embedding_764",
+      "speech_embedding_765",
+      "speech_embedding_766",
+      "speech_embedding_767"
+    ],
+    "primary_variant": "llm_fused",
+    "primary_metric": "participant-held-out Spearman correlation",
+    "fusion_method": "participant-disjoint Ridge comparison with direct concatenation and validation-tuned late fusion",
+    "participant_disjoint": true,
+    "train_rows": 1403,
+    "validation_rows": 303,
+    "test_rows": 292
+  },
+  "variants": {
+    "length_only": {
+      "big_five": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.3352487498912626,
+          "1.0": 0.3352503891317463,
+          "10.0": 0.3348067588913387,
+          "100.0": 0.3353286412958945
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.3353286412958945,
+          "per_target": {
+            "openness": {
+              "spearman": 0.4208284052778375
+            },
+            "conscientiousness": {
+              "spearman": 0.3689373850047213
+            },
+            "extraversion": {
+              "spearman": 0.3612111700875484
+            },
+            "agreeableness": {
+              "spearman": 0.381924052048159
+            },
+            "neuroticism": {
+              "spearman": 0.14374219406120625
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.42842574684290796,
+          "per_target": {
+            "openness": {
+              "spearman": 0.4893146849485761
+            },
+            "conscientiousness": {
+              "spearman": 0.4770887464431036
+            },
+            "extraversion": {
+              "spearman": 0.39734143495764346
+            },
+            "agreeableness": {
+              "spearman": 0.4728332493677526
+            },
+            "neuroticism": {
+              "spearman": 0.3055506184974642
+            }
+          }
+        }
+      },
+      "speaking_skills": {
+        "selected_alpha": 1.0,
+        "validation_candidates": {
+          "0.1": 0.420101100157916,
+          "1.0": 0.4207166780974937,
+          "10.0": 0.4198452923666269,
+          "100.0": 0.41898210283817916
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.4207166780974937,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.4207166780974937
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.4685478688606798,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.4685478688606798
+            }
+          }
+        }
+      }
+    },
+    "text_only": {
+      "big_five": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.20279843780638845,
+          "1.0": 0.2046161800107885,
+          "10.0": 0.21525681788136897,
+          "100.0": 0.2339580195505484
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.2339580195505484,
+          "per_target": {
+            "openness": {
+              "spearman": 0.3262113482278904
+            },
+            "conscientiousness": {
+              "spearman": 0.2697115653190467
+            },
+            "extraversion": {
+              "spearman": 0.25705664925557026
+            },
+            "agreeableness": {
+              "spearman": 0.2908029482987154
+            },
+            "neuroticism": {
+              "spearman": 0.026007586651519223
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.26663276667353264,
+          "per_target": {
+            "openness": {
+              "spearman": 0.39888322817950533
+            },
+            "conscientiousness": {
+              "spearman": 0.22305071021312833
+            },
+            "extraversion": {
+              "spearman": 0.29867814125242703
+            },
+            "agreeableness": {
+              "spearman": 0.3074127717826738
+            },
+            "neuroticism": {
+              "spearman": 0.10513898193992859
+            }
+          }
+        }
+      },
+      "speaking_skills": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.24962486257907807,
+          "1.0": 0.2525427059201387,
+          "10.0": 0.25959272273311246,
+          "100.0": 0.2775941423993544
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.2775941423993544,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.2775941423993544
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.3274698394493309,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.3274698394493309
+            }
+          }
+        }
+      }
+    },
+    "audio_only": {
+      "big_five": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.3354454268010546,
+          "1.0": 0.3355103923916155,
+          "10.0": 0.33614684811746864,
+          "100.0": 0.3395044389379956
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.3395044389379956,
+          "per_target": {
+            "openness": {
+              "spearman": 0.3938739518718686
+            },
+            "conscientiousness": {
+              "spearman": 0.33071583690497125
+            },
+            "extraversion": {
+              "spearman": 0.3656809993227322
+            },
+            "agreeableness": {
+              "spearman": 0.36353273477430553
+            },
+            "neuroticism": {
+              "spearman": 0.24371867181610032
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.4645085384609118,
+          "per_target": {
+            "openness": {
+              "spearman": 0.4946778616981839
+            },
+            "conscientiousness": {
+              "spearman": 0.48417143435581983
+            },
+            "extraversion": {
+              "spearman": 0.4784408091660301
+            },
+            "agreeableness": {
+              "spearman": 0.502146062379726
+            },
+            "neuroticism": {
+              "spearman": 0.3631065247047989
+            }
+          }
+        }
+      },
+      "speaking_skills": {
+        "selected_alpha": 0.1,
+        "validation_candidates": {
+          "0.1": 0.40295748733295694,
+          "1.0": 0.4028578389171565,
+          "10.0": 0.4028306620764836,
+          "100.0": 0.40278364182833537
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.40295748733295694,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.40295748733295694
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.48252134012668957,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.48252134012668957
+            }
+          }
+        }
+      }
+    },
+    "fused": {
+      "big_five": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.22837261860267954,
+          "1.0": 0.2291418525242909,
+          "10.0": 0.241159709000825,
+          "100.0": 0.26507549876512704
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.26507549876512704,
+          "per_target": {
+            "openness": {
+              "spearman": 0.3112127534429499
+            },
+            "conscientiousness": {
+              "spearman": 0.28488745661687553
+            },
+            "extraversion": {
+              "spearman": 0.3123787691955943
+            },
+            "agreeableness": {
+              "spearman": 0.3084411473716438
+            },
+            "neuroticism": {
+              "spearman": 0.10845736719857171
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.3164768427702334,
+          "per_target": {
+            "openness": {
+              "spearman": 0.41510076009933844
+            },
+            "conscientiousness": {
+              "spearman": 0.2544022595713909
+            },
+            "extraversion": {
+              "spearman": 0.3749213150630748
+            },
+            "agreeableness": {
+              "spearman": 0.33843126575541593
+            },
+            "neuroticism": {
+              "spearman": 0.19952861336194722
+            }
+          }
+        }
+      },
+      "speaking_skills": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.26250478829688473,
+          "1.0": 0.2641906139027984,
+          "10.0": 0.2755382601678271,
+          "100.0": 0.296573336926715
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.296573336926715,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.296573336926715
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.34694095430160793,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.34694095430160793
+            }
+          }
+        }
+      }
+    },
+    "llm_text_only": {
+      "big_five": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.36178947687507307,
+          "1.0": 0.3618175165149278,
+          "10.0": 0.36199817807140644,
+          "100.0": 0.3641259122193902
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.3641259122193902,
+          "per_target": {
+            "openness": {
+              "spearman": 0.4204874001192978
+            },
+            "conscientiousness": {
+              "spearman": 0.4343842770103241
+            },
+            "extraversion": {
+              "spearman": 0.34677722624853735
+            },
+            "agreeableness": {
+              "spearman": 0.4047532797491816
+            },
+            "neuroticism": {
+              "spearman": 0.21422737796961025
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.3944717585948837,
+          "per_target": {
+            "openness": {
+              "spearman": 0.4753099019955236
+            },
+            "conscientiousness": {
+              "spearman": 0.42885779994929113
+            },
+            "extraversion": {
+              "spearman": 0.39812486308543166
+            },
+            "agreeableness": {
+              "spearman": 0.4189969916555562
+            },
+            "neuroticism": {
+              "spearman": 0.2510692362886157
+            }
+          }
+        }
+      },
+      "speaking_skills": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.41932893161422713,
+          "1.0": 0.4195265032304336,
+          "10.0": 0.41979266411951516,
+          "100.0": 0.42340330697464135
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.42340330697464135,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.42340330697464135
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.42372122424792824,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.42372122424792824
+            }
+          }
+        }
+      }
+    },
+    "llm_fused": {
+      "big_five": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.39181766073289975,
+          "1.0": 0.39187210066644595,
+          "10.0": 0.3928247563656805,
+          "100.0": 0.4010239625218797
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.4010239625218797,
+          "per_target": {
+            "openness": {
+              "spearman": 0.4417518054527519
+            },
+            "conscientiousness": {
+              "spearman": 0.4329005710908866
+            },
+            "extraversion": {
+              "spearman": 0.4108081817353591
+            },
+            "agreeableness": {
+              "spearman": 0.43212322750728727
+            },
+            "neuroticism": {
+              "spearman": 0.28753602682311385
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.4518194888881669,
+          "per_target": {
+            "openness": {
+              "spearman": 0.5099381558382708
+            },
+            "conscientiousness": {
+              "spearman": 0.4637912095594306
+            },
+            "extraversion": {
+              "spearman": 0.4833113304811399
+            },
+            "agreeableness": {
+              "spearman": 0.4833180783438749
+            },
+            "neuroticism": {
+              "spearman": 0.31873867021811847
+            }
+          }
+        }
+      },
+      "speaking_skills": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.46490473820466044,
+          "1.0": 0.46508462292961095,
+          "10.0": 0.4654525885660207,
+          "100.0": 0.46854470777092594
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.46854470777092594,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.46854470777092594
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.4858579256783016,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.4858579256783016
+            }
+          }
+        }
+      }
+    },
+    "speech_only": {
+      "big_five": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.1354181852535613,
+          "1.0": 0.15717863844248398,
+          "10.0": 0.23022023701878344,
+          "100.0": 0.340774934670531
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.340774934670531,
+          "per_target": {
+            "openness": {
+              "spearman": 0.33048548082688695
+            },
+            "conscientiousness": {
+              "spearman": 0.3434984423465333
+            },
+            "extraversion": {
+              "spearman": 0.38772012297315755
+            },
+            "agreeableness": {
+              "spearman": 0.4182095185591513
+            },
+            "neuroticism": {
+              "spearman": 0.22396110864692567
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.35953314407213466,
+          "per_target": {
+            "openness": {
+              "spearman": 0.43242205009853707
+            },
+            "conscientiousness": {
+              "spearman": 0.39458146361254515
+            },
+            "extraversion": {
+              "spearman": 0.42763275221398817
+            },
+            "agreeableness": {
+              "spearman": 0.31569095737791647
+            },
+            "neuroticism": {
+              "spearman": 0.22733849705768613
+            }
+          }
+        }
+      },
+      "speaking_skills": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.19555030999398296,
+          "1.0": 0.22112846222980848,
+          "10.0": 0.2943778126548072,
+          "100.0": 0.4142997202188571
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.4142997202188571,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.4142997202188571
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.3126433319037552,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.3126433319037552
+            }
+          }
+        }
+      }
+    },
+    "llm_speech": {
+      "big_five": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.13292040370533031,
+          "1.0": 0.15635571665136988,
+          "10.0": 0.23228260019704416,
+          "100.0": 0.3535607092074095
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.3535607092074095,
+          "per_target": {
+            "openness": {
+              "spearman": 0.33840867803601726
+            },
+            "conscientiousness": {
+              "spearman": 0.3678319091560762
+            },
+            "extraversion": {
+              "spearman": 0.39535146811496785
+            },
+            "agreeableness": {
+              "spearman": 0.4284862775886828
+            },
+            "neuroticism": {
+              "spearman": 0.23772521314130338
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.37903993336985153,
+          "per_target": {
+            "openness": {
+              "spearman": 0.4581502373080855
+            },
+            "conscientiousness": {
+              "spearman": 0.4168641621494072
+            },
+            "extraversion": {
+              "spearman": 0.44291910613974866
+            },
+            "agreeableness": {
+              "spearman": 0.3358310065258213
+            },
+            "neuroticism": {
+              "spearman": 0.24143515472619473
+            }
+          }
+        }
+      },
+      "speaking_skills": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.1912648729747751,
+          "1.0": 0.2185896587658694,
+          "10.0": 0.3013294966561202,
+          "100.0": 0.4323766155922179
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.4323766155922179,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.4323766155922179
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.34155290603091176,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.34155290603091176
+            }
+          }
+        }
+      }
+    },
+    "llm_speech_fused": {
+      "big_five": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.14600168992425222,
+          "1.0": 0.1703013985821765,
+          "10.0": 0.24761309254520386,
+          "100.0": 0.35847186416332566
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.35847186416332566,
+          "per_target": {
+            "openness": {
+              "spearman": 0.35983264681286165
+            },
+            "conscientiousness": {
+              "spearman": 0.3767601445332981
+            },
+            "extraversion": {
+              "spearman": 0.40846105274625616
+            },
+            "agreeableness": {
+              "spearman": 0.42173822782273207
+            },
+            "neuroticism": {
+              "spearman": 0.22556724890148017
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.3869274137227299,
+          "per_target": {
+            "openness": {
+              "spearman": 0.46602981302176005
+            },
+            "conscientiousness": {
+              "spearman": 0.4211659246429566
+            },
+            "extraversion": {
+              "spearman": 0.445566196292642
+            },
+            "agreeableness": {
+              "spearman": 0.3511997458949322
+            },
+            "neuroticism": {
+              "spearman": 0.2506753887613583
+            }
+          }
+        }
+      },
+      "speaking_skills": {
+        "selected_alpha": 100.0,
+        "validation_candidates": {
+          "0.1": 0.21433928991059492,
+          "1.0": 0.24357160358768534,
+          "10.0": 0.3338909974293117,
+          "100.0": 0.4418926027915016
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.4418926027915016,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.4418926027915016
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.3609404198034157,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.3609404198034157
+            }
+          }
+        }
+      }
+    },
+    "late_fusion": {
+      "big_five": {
+        "text_weight": 0.15,
+        "audio_weight": 0.85,
+        "validation_candidates": {
+          "0.00": 0.3395044389379956,
+          "0.05": 0.34275518349657036,
+          "0.10": 0.34485358047295345,
+          "0.15": 0.34604358086335113,
+          "0.20": 0.34566388161604167,
+          "0.25": 0.3430461913495981,
+          "0.30": 0.34070527344974594,
+          "0.35": 0.33735199677508587,
+          "0.40": 0.33117888592658706,
+          "0.45": 0.3239463960602028,
+          "0.50": 0.3154420301874935,
+          "0.55": 0.3074334906211435,
+          "0.60": 0.29947930473027756,
+          "0.65": 0.29139328960744415,
+          "0.70": 0.2827536434757524,
+          "0.75": 0.27440664443492047,
+          "0.80": 0.2671564680550852,
+          "0.85": 0.2594781054983815,
+          "0.90": 0.2509849554634705,
+          "0.95": 0.2424069964396693,
+          "1.00": 0.2339580195505484
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.34604358086335113,
+          "per_target": {
+            "openness": {
+              "spearman": 0.40566865697468596
+            },
+            "conscientiousness": {
+              "spearman": 0.3444577908121872
+            },
+            "extraversion": {
+              "spearman": 0.38546505069458903
+            },
+            "agreeableness": {
+              "spearman": 0.38150931097881047
+            },
+            "neuroticism": {
+              "spearman": 0.21311709485648295
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.45366568180003364,
+          "per_target": {
+            "openness": {
+              "spearman": 0.4959464605038129
+            },
+            "conscientiousness": {
+              "spearman": 0.46404014016330153
+            },
+            "extraversion": {
+              "spearman": 0.47067015949112456
+            },
+            "agreeableness": {
+              "spearman": 0.4878940874239338
+            },
+            "neuroticism": {
+              "spearman": 0.3497775614179959
+            }
+          }
+        }
+      },
+      "speaking_skills": {
+        "text_weight": 0.2,
+        "audio_weight": 0.8,
+        "validation_candidates": {
+          "0.00": 0.40295748733295694,
+          "0.05": 0.4085990102886755,
+          "0.10": 0.4103189158772043,
+          "0.15": 0.41186972114200515,
+          "0.20": 0.4142634397551846,
+          "0.25": 0.4136452745411485,
+          "0.30": 0.4081792791279936,
+          "0.35": 0.4049724122744388,
+          "0.40": 0.3969349703568395,
+          "0.45": 0.38985950221963117,
+          "0.50": 0.37675638402260025,
+          "0.55": 0.3664149501942077,
+          "0.60": 0.3580013463319891,
+          "0.65": 0.34934099403820823,
+          "0.70": 0.33765581656590626,
+          "0.75": 0.3281111385995686,
+          "0.80": 0.3195940039269043,
+          "0.85": 0.3092560211255266,
+          "0.90": 0.2989107048917424,
+          "0.95": 0.28735062714872894,
+          "1.00": 0.2775941423993544
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.4142634397551846,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.4142634397551846
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.4774450169424627,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.4774450169424627
+            }
+          }
+        }
+      }
+    },
+    "llm_late_fusion": {
+      "big_five": {
+        "text_weight": 0.55,
+        "audio_weight": 0.44999999999999996,
+        "validation_candidates": {
+          "0.00": 0.3395044389379956,
+          "0.05": 0.34892882852231594,
+          "0.10": 0.35868971017315776,
+          "0.15": 0.3660785291727813,
+          "0.20": 0.3740586814600839,
+          "0.25": 0.3819186517704771,
+          "0.30": 0.3882316997219431,
+          "0.35": 0.39312499561883535,
+          "0.40": 0.3961203135472925,
+          "0.45": 0.3987397284797739,
+          "0.50": 0.40028811752470794,
+          "0.55": 0.4007422725329284,
+          "0.60": 0.3996067987367297,
+          "0.65": 0.39736363190281404,
+          "0.70": 0.3940200191855677,
+          "0.75": 0.3902937739718439,
+          "0.80": 0.3863110312582264,
+          "0.85": 0.38196377393409786,
+          "0.90": 0.3769970574612186,
+          "0.95": 0.3709493071256869,
+          "1.00": 0.3641259122193902
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.4007422725329284,
+          "per_target": {
+            "openness": {
+              "spearman": 0.4436119084119528
+            },
+            "conscientiousness": {
+              "spearman": 0.4291626786647558
+            },
+            "extraversion": {
+              "spearman": 0.4123482020424897
+            },
+            "agreeableness": {
+              "spearman": 0.44049023979779295
+            },
+            "neuroticism": {
+              "spearman": 0.2780983337476507
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.4615648486480633,
+          "per_target": {
+            "openness": {
+              "spearman": 0.514686723242915
+            },
+            "conscientiousness": {
+              "spearman": 0.47978316225113643
+            },
+            "extraversion": {
+              "spearman": 0.4719353978903553
+            },
+            "agreeableness": {
+              "spearman": 0.4942717875235278
+            },
+            "neuroticism": {
+              "spearman": 0.34714717233238174
+            }
+          }
+        }
+      },
+      "speaking_skills": {
+        "text_weight": 0.45,
+        "audio_weight": 0.55,
+        "validation_candidates": {
+          "0.00": 0.40295748733295694,
+          "0.05": 0.4140970094164694,
+          "0.10": 0.4252071559179116,
+          "0.15": 0.43656275663637256,
+          "0.20": 0.44222977253967083,
+          "0.25": 0.44793302421490155,
+          "0.30": 0.45324630996362075,
+          "0.35": 0.4587088525824428,
+          "0.40": 0.46104002057676596,
+          "0.45": 0.4627508666658641,
+          "0.50": 0.46180873659561944,
+          "0.55": 0.4621702315584697,
+          "0.60": 0.4626542379407108,
+          "0.65": 0.4607497030230689,
+          "0.70": 0.4570027516539551,
+          "0.75": 0.45500115663292257,
+          "0.80": 0.4500881898884098,
+          "0.85": 0.44609449016756525,
+          "0.90": 0.4389581999880522,
+          "0.95": 0.43243489828373033,
+          "1.00": 0.42340330697464135
+        },
+        "validation_metrics": {
+          "macro_spearman": 0.4627508666658641,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.4627508666658641
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": 0.4931436894712979,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": 0.4931436894712979
+            }
+          }
+        }
+      }
+    },
+    "mean_baseline": {
+      "big_five": {
+        "validation_metrics": {
+          "macro_spearman": null,
+          "per_target": {
+            "openness": {
+              "spearman": null
+            },
+            "conscientiousness": {
+              "spearman": null
+            },
+            "extraversion": {
+              "spearman": null
+            },
+            "agreeableness": {
+              "spearman": null
+            },
+            "neuroticism": {
+              "spearman": null
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": null,
+          "per_target": {
+            "openness": {
+              "spearman": null
+            },
+            "conscientiousness": {
+              "spearman": null
+            },
+            "extraversion": {
+              "spearman": null
+            },
+            "agreeableness": {
+              "spearman": null
+            },
+            "neuroticism": {
+              "spearman": null
+            }
+          }
+        }
+      },
+      "speaking_skills": {
+        "validation_metrics": {
+          "macro_spearman": null,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": null
+            }
+          }
+        },
+        "test_metrics": {
+          "macro_spearman": null,
+          "per_target": {
+            "speaking_skills": {
+              "spearman": null
+            }
+          }
+        }
+      }
+    }
+  },
+  "artifact": "outputs/models/model1_feature_fusion.joblib",
+  "predictions": "outputs/benchmark/recruitview-feature-fusion/predictions.csv"
+}

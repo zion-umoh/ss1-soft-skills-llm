@@ -1,7 +1,0 @@
-assessment_id,scenario_id,response_order,response_text
-fixture-three,self_management-fixture-01,1,"I would clarify the new deadline, rank the tasks by impact, and agree a realistic sequence. I would tell the team what can be completed and what needs renegotiation."
-fixture-three,self_management-fixture-02,2,"I would check the available records, identify the most urgent gap, and make a provisional plan. I would document assumptions and update the people waiting for the handover."
-fixture-three,cooperation-fixture-01,3,"I would ask about the teammate's constraint, explain the group's deadline, and negotiate a smaller commitment or a new division of work."
-fixture-three,cooperation-fixture-02,4,"I would listen to concerns, describe the evidence of the problem, and suggest a limited trial so the group could compare the current process with the alternative."
-fixture-three,innovation-fixture-01,5,"I would identify which assumption is failing, gather the missing information, and test a smaller alternative before changing the whole plan."
-fixture-three,innovation-fixture-02,6,"I would compare the conflicting notes with the shared goal, ask someone to verify the facts, and try a reversible workaround while recording its result."

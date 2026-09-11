@@ -1,47 +1,21 @@
 {
   "datasets": [
     {
-      "dataset_id": "essays",
-      "purpose": "Primary Model 1 dataset: written text with binary Big Five labels.",
+      "dataset_id": "recruitview",
+      "purpose": "Model 1 interview transcript and vocal-delivery feature source; Big Five and direct speaking_skills targets.",
       "raw_paths": [
-        "data/raw/essays/essay_training.csv"
+        "data/raw/recruitview/metadata.jsonl",
+        "data/raw/recruitview/videos/"
       ],
-      "source": "Original stream-of-consciousness Essays corpus; the precise distributor of this local CSV has not yet been verified.",
-      "citation": "Pennebaker, J. W., & King, L. A. (1999). Linguistic styles: Language use as an individual difference. Journal of Personality and Social Psychology, 77(6), 1296–1312. https://doi.org/10.1037/0022-3514.77.6.1296",
-      "source_reference": "https://doi.org/10.1037/0022-3514.77.6.1296",
-      "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
-      "licence_reference": "https://creativecommons.org/licenses/by/4.0/legalcode",
-      "downloaded_at": null,
-      "version": null,
-      "provenance_status": "distribution_and_licence_verification_pending",
-      "notes": "The original corpus citation is recorded. Verify the precise upstream distributor, applicable licence, download date and version of this local 2,467-row CSV before analysis or redistribution."
-    },
-    {
-      "dataset_id": "goemotions",
-      "purpose": "Emotion-recognition support dataset for Model 1; not a Big Five target dataset.",
-      "raw_paths": [
-        "data/raw/goemotions/goemotions_1.csv",
-        "data/raw/goemotions/goemotions_2.csv",
-        "data/raw/goemotions/goemotions_3.csv",
-        "data/raw/goemotions/official_splits/train.tsv",
-        "data/raw/goemotions/official_splits/validation.tsv",
-        "data/raw/goemotions/official_splits/test.tsv"
-      ],
-      "source": "Google Research GoEmotions full dataset",
-      "download_urls": [
-        "https://storage.googleapis.com/gresearch/goemotions/data/full_dataset/goemotions_1.csv",
-        "https://storage.googleapis.com/gresearch/goemotions/data/full_dataset/goemotions_2.csv",
-        "https://storage.googleapis.com/gresearch/goemotions/data/full_dataset/goemotions_3.csv",
-        "https://raw.githubusercontent.com/google-research/google-research/master/goemotions/data/train.tsv",
-        "https://raw.githubusercontent.com/google-research/google-research/master/goemotions/data/dev.tsv",
-        "https://raw.githubusercontent.com/google-research/google-research/master/goemotions/data/test.tsv"
-      ],
-      "citation": "Demszky et al. (2020), GoEmotions: A Dataset of Fine-Grained Emotions.",
-      "licence": null,
-      "downloaded_at": "2026-08-25 (CSV shards); 2026-08-27 (official split references)",
-      "version": "full_dataset CSV shards plus official agreement-filtered split references",
-      "provenance_status": "verified",
-      "notes": "The Google Research repository states that datasets in the repository are released under CC BY 4.0. Preserve attribution to the original paper."
+      "source": "AI4A-lab RecruitView dataset on Hugging Face",
+      "source_reference": "https://huggingface.co/datasets/AI4A-lab/RecruitView",
+      "citation": "Gupta, A. K., Sheth, F., Shaikh, H., Kumar, D., Puniya, A., Panwar, D., Chaurasia, S., & Mathur, P. (2025). RecruitView: A Multimodal Dataset for Predicting Personality and Interview Performance for Human Resources Applications. arXiv:2512.00450.",
+      "paper_reference": "https://arxiv.org/abs/2512.00450",
+      "licence": "CC BY-NC 4.0 (dataset card; verify institutional use terms before redistribution).",
+      "downloaded_at": "2026-09-11",
+      "version": "Hugging Face commit 0cfa07ed0a43622f9104592b100d7bf3a25f6140 (last modified 2025-12-06; accessed 2026-09-11).",
+      "provenance_status": "verified_dataset_card_and_commit",
+      "notes": "Raw metadata contains 2,011 interview rows. The active study retains the five Big Five labels and speaking_skills only; video is decoded into aggregate numerical audio columns and is never passed directly to the predictor."
     },
     {
       "dataset_id": "bfi2_bessi_college_student_sample",
@@ -50,14 +24,17 @@
         "data/raw/bfi2-bessi/College student sample.xlsx",
         "data/raw/bfi2-bessi/BESSI automated scoring template.xlsx"
       ],
-      "source": "Downloaded BFI-2/BESSI college student sample workbook; precise upstream distributor remains to be verified.",
-      "citation": null,
-      "source_reference": null,
-      "licence": null,
+      "source": "Authors' OSF project 4zgyr, College student sample.xlsx; upstream version 1 checksum exactly matches the local workbook.",
+      "citation": "Soto, C. J., Napolitano, C. M., Sewell, M. N., Yoon, H. J., & Roberts, B. W. (2022). An integrative framework for conceptualizing and assessing social, emotional, and behavioral skills: The BESSI. Journal of Personality and Social Psychology, 123(1), 192-222. https://doi.org/10.1037/pspp0000401",
+      "source_reference": "https://osf.io/7cktv/",
+      "data_paper_reference": "https://doi.org/10.1016/j.dib.2022.107792",
+      "licence": "No explicit dataset licence in OSF project or parent metadata (node_license null). Public availability and article licensing do not establish workbook redistribution rights. Do not redistribute the workbook without checking terms.",
       "downloaded_at": null,
-      "version": "BFI-2 and BESSI scores supplied in the downloaded workbook; exact release/version pending verification.",
-      "provenance_status": "source_licence_and_version_verification_pending",
-      "notes": "The workbook has 322 measurement rows. Its Case column is reused across rows with distinct values, so it must not be treated as a unique participant identifier."
+      "version": "OSF file 611552c0d698660097a2c5b8, version 1, modified 2021-08-12T16:56:32.613533+00:00; verified 2026-09-11.",
+      "source_sha256": "1424d3ccdbc6f1b8dd63bce66b4fb6c12e2525ff5c220b6b14383ad15391ff93",
+      "provenance_status": "college_workbook_source_and_version_hash_verified_redistribution_terms_unspecified",
+      "verification_record": "docs/bessi-source-verification.md",
+      "notes": "The workbook has 322 measurement rows. Its Case column is reused across rows with distinct values, so it must not be treated as a unique participant identifier. Source verification applies to College student sample.xlsx; the separate scoring-template file was not hash-verified. Original download date remains unknown."
     }
   ]
 }

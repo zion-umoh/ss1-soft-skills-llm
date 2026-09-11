@@ -1,6 +1,6 @@
 {
   "dataset_id": "bfi2_bessi_college_student_sample",
-  "generated_at_utc": "2026-08-27T09:48:05.916129Z",
+  "generated_at_utc": "2026-09-11T07:59:36.856552Z",
   "source_file": "data/raw/bfi2-bessi/College student sample.xlsx",
   "source_sha256": "1424d3ccdbc6f1b8dd63bce66b4fb6c12e2525ff5c220b6b14383ad15391ff93",
   "source_schema": [
@@ -485,7 +485,7 @@
     "case_identifier_is_unique": false
   },
   "score_handling": {
-    "source": "precomputed BFI-2 and BESSI domain-scale columns supplied in the workbook",
+    "source": "supplied BFI-2 domain-scale columns and BESSI domain-scale columns",
     "source_scale": "1--5",
     "feature_conversion": "BFI-2 features are transformed to unit interval with (score - 1) / 4.",
     "target_scale": "BESSI targets remain on the original 1--5 scale for interpretability.",
@@ -508,6 +508,7 @@
     "big_five_negative_emotionality",
     "big_five_open_mindedness"
   ],
+  "feature_level": "domain",
   "targets": [
     "bessi_self_management",
     "bessi_social_engagement",

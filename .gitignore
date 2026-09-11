@@ -8,6 +8,7 @@ reports/data-quality/
 reports/model-evaluation/
 outputs/model-evaluation/
 outputs/models/
+outputs/benchmark/
 .venv/
 
 # Local secrets

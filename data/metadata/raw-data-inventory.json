@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-27T09:48:06.035462Z",
+  "generated_at_utc": "2026-09-11T07:43:42.188338Z",
   "data_root": "data/raw",
   "files": [
     {
@@ -1205,6 +1205,38 @@
         "text",
         "emotion_ids",
         "comment_id"
+      ]
+    },
+    {
+      "relative_path": "data/raw/recruitview/metadata.jsonl",
+      "format": "jsonl",
+      "file_size_bytes": 14984754,
+      "modified_at_utc": "2026-09-10T05:37:43.082031Z",
+      "sha256": "902c1289bdfeff7794ab941b2114273dc705dd811d31ab3a7fcb70bdb872c32e",
+      "row_count": 2011,
+      "column_count": 21,
+      "columns": [
+        "id",
+        "file_name",
+        "duration",
+        "question_id",
+        "question",
+        "video_quality",
+        "user_no",
+        "openness",
+        "conscientiousness",
+        "extraversion",
+        "agreeableness",
+        "neuroticism",
+        "overall_personality",
+        "interview_score",
+        "answer_score",
+        "speaking_skills",
+        "confidence_score",
+        "facial_expression",
+        "overall_performance",
+        "transcript",
+        "gemini_summary"
       ]
     }
   ]

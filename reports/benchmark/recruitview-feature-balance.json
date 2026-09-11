@@ -1,0 +1,983 @@
+{
+  "generated_at_utc": "2026-09-11T11:18:37.803493Z",
+  "status": "completed",
+  "selected_variant": "llm_fused",
+  "validation_rows": 303,
+  "permutation_repeats": 20,
+  "feature_columns": [
+    "emotional_expressiveness",
+    "positive_affect",
+    "negative_affect",
+    "social_orientation",
+    "assertiveness",
+    "certainty",
+    "cognitive_complexity",
+    "response_elaboration",
+    "interpersonal_warmth",
+    "question_relevance",
+    "audio_duration_seconds",
+    "audio_rms_mean",
+    "audio_rms_std",
+    "audio_zero_crossing_rate",
+    "audio_spectral_centroid_mean_hz",
+    "audio_spectral_centroid_std_hz",
+    "audio_pitch_mean_hz",
+    "audio_pitch_std_hz",
+    "audio_pause_count",
+    "audio_pause_fraction",
+    "audio_speaking_time_ratio",
+    "audio_words_per_second"
+  ],
+  "feature_stats": {
+    "emotional_expressiveness": {
+      "mean": 1.1906906906906907,
+      "std": 1.0484620623177279,
+      "min": 0.0,
+      "max": 5.0,
+      "p01": 0.0,
+      "p99": 4.0,
+      "unique_values": 6,
+      "zero_fraction": 0.2747747747747748
+    },
+    "positive_affect": {
+      "mean": 2.410910910910911,
+      "std": 1.2431276835098555,
+      "min": 0.0,
+      "max": 5.0,
+      "p01": 0.0,
+      "p99": 5.0,
+      "unique_values": 6,
+      "zero_fraction": 0.08458458458458458
+    },
+    "negative_affect": {
+      "mean": 0.7137137137137137,
+      "std": 1.0291653430938819,
+      "min": 0.0,
+      "max": 5.0,
+      "p01": 0.0,
+      "p99": 4.0,
+      "unique_values": 6,
+      "zero_fraction": 0.585085085085085
+    },
+    "social_orientation": {
+      "mean": 2.0005005005005003,
+      "std": 1.7021742410507352,
+      "min": 0.0,
+      "max": 5.0,
+      "p01": 0.0,
+      "p99": 5.0,
+      "unique_values": 6,
+      "zero_fraction": 0.3103103103103103
+    },
+    "assertiveness": {
+      "mean": 3.0255255255255253,
+      "std": 1.0391963376221196,
+      "min": 0.0,
+      "max": 5.0,
+      "p01": 0.0,
+      "p99": 5.0,
+      "unique_values": 6,
+      "zero_fraction": 0.018518518518518517
+    },
+    "certainty": {
+      "mean": 3.573073073073073,
+      "std": 0.7402456546950886,
+      "min": 0.0,
+      "max": 5.0,
+      "p01": 1.0,
+      "p99": 5.0,
+      "unique_values": 6,
+      "zero_fraction": 0.0025025025025025025
+    },
+    "cognitive_complexity": {
+      "mean": 2.145145145145145,
+      "std": 1.077085914874935,
+      "min": 0.0,
+      "max": 5.0,
+      "p01": 0.0,
+      "p99": 4.0,
+      "unique_values": 6,
+      "zero_fraction": 0.06856856856856856
+    },
+    "response_elaboration": {
+      "mean": 2.544044044044044,
+      "std": 1.1602405872414325,
+      "min": 0.0,
+      "max": 5.0,
+      "p01": 0.0,
+      "p99": 5.0,
+      "unique_values": 6,
+      "zero_fraction": 0.04904904904904905
+    },
+    "interpersonal_warmth": {
+      "mean": 1.962962962962963,
+      "std": 1.0245385834308869,
+      "min": 0.0,
+      "max": 5.0,
+      "p01": 0.0,
+      "p99": 4.0,
+      "unique_values": 6,
+      "zero_fraction": 0.06006006006006006
+    },
+    "question_relevance": {
+      "mean": 4.423423423423423,
+      "std": 1.0606681426349585,
+      "min": 0.0,
+      "max": 5.0,
+      "p01": 0.0,
+      "p99": 5.0,
+      "unique_values": 6,
+      "zero_fraction": 0.015015015015015015
+    },
+    "audio_duration_seconds": {
+      "mean": 29.802506913163164,
+      "std": 16.32248240566944,
+      "min": 0.601,
+      "max": 92.343,
+      "p01": 2.384409999999999,
+      "p99": 60.526,
+      "unique_values": 1223,
+      "zero_fraction": 0.0
+    },
+    "audio_rms_mean": {
+      "mean": 0.0428560933900594,
+      "std": 0.018863031655827055,
+      "min": 1.0000001111620804e-06,
+      "max": 0.29400643706321716,
+      "p01": 0.007052493677474558,
+      "p99": 0.12336912974715232,
+      "unique_values": 1944,
+      "zero_fraction": 0.0
+    },
+    "audio_rms_std": {
+      "mean": 0.046723837112278815,
+      "std": 0.01954667580479805,
+      "min": 1.1368683772161603e-13,
+      "max": 0.2800118923187256,
+      "p01": 0.0075786269456148145,
+      "p99": 0.13459607645869254,
+      "unique_values": 1944,
+      "zero_fraction": 0.0
+    },
+    "audio_zero_crossing_rate": {
+      "mean": 0.1287860564032668,
+      "std": 0.03505784649917847,
+      "min": 0.0,
+      "max": 0.7171093900686544,
+      "p01": 0.07572044829824688,
+      "p99": 0.23553657902762834,
+      "unique_values": 1944,
+      "zero_fraction": 0.0005005005005005005
+    },
+    "audio_spectral_centroid_mean_hz": {
+      "mean": 1485.219693031874,
+      "std": 251.0241947665001,
+      "min": 0.0,
+      "max": 3852.405556540847,
+      "p01": 942.895201152734,
+      "p99": 2209.3601334076156,
+      "unique_values": 1944,
+      "zero_fraction": 0.0005005005005005005
+    },
+    "audio_spectral_centroid_std_hz": {
+      "mean": 997.2588286460217,
+      "std": 208.80030313328692,
+      "min": 0.0,
+      "max": 1866.8147217707133,
+      "p01": 484.9935360571087,
+      "p99": 1531.5796204430817,
+      "unique_values": 1944,
+      "zero_fraction": 0.0005005005005005005
+    },
+    "audio_pitch_mean_hz": {
+      "mean": 179.33760625369487,
+      "std": 32.293060512553865,
+      "min": 0.0,
+      "max": 318.57707509881425,
+      "p01": 128.80563874772704,
+      "p99": 254.25588646563517,
+      "unique_values": 1940,
+      "zero_fraction": 0.0025025025025025025
+    },
+    "audio_pitch_std_hz": {
+      "mean": 67.51604938454452,
+      "std": 16.12765457558742,
+      "min": 0.0,
+      "max": 126.45754594661517,
+      "p01": 37.774955760149695,
+      "p99": 109.50155474306766,
+      "unique_values": 1940,
+      "zero_fraction": 0.0025025025025025025
+    },
+    "audio_pause_count": {
+      "mean": 60.646646646646644,
+      "std": 42.21769297185876,
+      "min": 0.0,
+      "max": 310.0,
+      "p01": 2.0,
+      "p99": 186.0,
+      "unique_values": 196,
+      "zero_fraction": 0.002002002002002002
+    },
+    "audio_pause_fraction": {
+      "mean": 0.28969002140736233,
+      "std": 0.07787932068698471,
+      "min": 0.20356526739505462,
+      "max": 1.0,
+      "p01": 0.20893397689898513,
+      "p99": 0.5634708531702127,
+      "unique_values": 1923,
+      "zero_fraction": 0.0
+    },
+    "audio_speaking_time_ratio": {
+      "mean": 0.7103099785926376,
+      "std": 0.07787932068698471,
+      "min": 0.0,
+      "max": 0.7964347326049454,
+      "p01": 0.43652914682978705,
+      "p99": 0.7910660231010149,
+      "unique_values": 1923,
+      "zero_fraction": 0.002002002002002002
+    },
+    "audio_words_per_second": {
+      "mean": 2.75728800405531,
+      "std": 0.6846998956497817,
+      "min": 0.2172590597027896,
+      "max": 9.554140127388536,
+      "p01": 1.3388345776941974,
+      "p99": 4.566735535929776,
+      "unique_values": 1861,
+      "zero_fraction": 0.0
+    }
+  },
+  "high_correlations_abs_ge_0.70": [
+    {
+      "feature_a": "audio_pause_fraction",
+      "feature_b": "audio_speaking_time_ratio",
+      "pearson_r": -1.0
+    },
+    {
+      "feature_a": "audio_rms_mean",
+      "feature_b": "audio_rms_std",
+      "pearson_r": 0.9390677739961326
+    },
+    {
+      "feature_a": "audio_zero_crossing_rate",
+      "feature_b": "audio_spectral_centroid_mean_hz",
+      "pearson_r": 0.8682901535537548
+    },
+    {
+      "feature_a": "cognitive_complexity",
+      "feature_b": "response_elaboration",
+      "pearson_r": 0.806304179423279
+    },
+    {
+      "feature_a": "audio_duration_seconds",
+      "feature_b": "audio_pause_count",
+      "pearson_r": 0.8039703446139154
+    },
+    {
+      "feature_a": "response_elaboration",
+      "feature_b": "audio_duration_seconds",
+      "pearson_r": 0.7820855816365517
+    }
+  ],
+  "validation_big_five_baseline_macro_spearman": 0.4010239625218797,
+  "test_big_five_baseline_macro_spearman_train_only": 0.4532702793761875,
+  "group_absolute_coefficients": {
+    "llm_affect": {
+      "absolute_coefficient_sum": 0.7523719569034342,
+      "features": [
+        "emotional_expressiveness",
+        "positive_affect",
+        "negative_affect",
+        "interpersonal_warmth"
+      ]
+    },
+    "llm_social_agency": {
+      "absolute_coefficient_sum": 0.3994388449747914,
+      "features": [
+        "social_orientation",
+        "assertiveness"
+      ]
+    },
+    "llm_cognition_communication": {
+      "absolute_coefficient_sum": 0.7541691270647058,
+      "features": [
+        "certainty",
+        "cognitive_complexity",
+        "response_elaboration",
+        "question_relevance"
+      ]
+    },
+    "audio_timing": {
+      "absolute_coefficient_sum": 1.4841549270121077,
+      "features": [
+        "audio_duration_seconds",
+        "audio_pause_count",
+        "audio_pause_fraction",
+        "audio_speaking_time_ratio",
+        "audio_words_per_second"
+      ]
+    },
+    "audio_pitch_energy": {
+      "absolute_coefficient_sum": 0.44700232998986056,
+      "features": [
+        "audio_rms_mean",
+        "audio_rms_std",
+        "audio_pitch_mean_hz",
+        "audio_pitch_std_hz"
+      ]
+    },
+    "audio_spectral": {
+      "absolute_coefficient_sum": 0.4550904346313915,
+      "features": [
+        "audio_zero_crossing_rate",
+        "audio_spectral_centroid_mean_hz",
+        "audio_spectral_centroid_std_hz"
+      ]
+    }
+  },
+  "group_validation_permutation_importance": {
+    "llm_affect": {
+      "mean_score_drop": 0.05336039257478399,
+      "std_score_drop": 0.015052473345061232
+    },
+    "llm_social_agency": {
+      "mean_score_drop": 0.013523850468534798,
+      "std_score_drop": 0.00645558918931597
+    },
+    "llm_cognition_communication": {
+      "mean_score_drop": 0.0827902886341161,
+      "std_score_drop": 0.02439602661958747
+    },
+    "audio_timing": {
+      "mean_score_drop": 0.16302895184095806,
+      "std_score_drop": 0.027612278204542026
+    },
+    "audio_pitch_energy": {
+      "mean_score_drop": 0.0014380552992299955,
+      "std_score_drop": 0.003224508666560295
+    },
+    "audio_spectral": {
+      "mean_score_drop": 0.012146339311667486,
+      "std_score_drop": 0.006811542183101061
+    }
+  },
+  "group_ablation_fixed_alpha": {
+    "llm_affect": {
+      "validation_macro_spearman_without_group": 0.3999151479007457,
+      "validation_change_from_full": -0.001108814621133991,
+      "test_macro_spearman_without_group": 0.4671997960219664,
+      "test_change_from_full_train_only": 0.01392951664577885
+    },
+    "llm_social_agency": {
+      "validation_macro_spearman_without_group": 0.40170804213057654,
+      "validation_change_from_full": 0.0006840796086968193,
+      "test_macro_spearman_without_group": 0.4581015151004818,
+      "test_change_from_full_train_only": 0.0048312357242942805
+    },
+    "llm_cognition_communication": {
+      "validation_macro_spearman_without_group": 0.3819488012158522,
+      "validation_change_from_full": -0.019075161306027544,
+      "test_macro_spearman_without_group": 0.44975257632854226,
+      "test_change_from_full_train_only": -0.0035177030476452598
+    },
+    "audio_timing": {
+      "validation_macro_spearman_without_group": 0.3963445439550366,
+      "validation_change_from_full": -0.004679418566843119,
+      "test_macro_spearman_without_group": 0.4268582770491266,
+      "test_change_from_full_train_only": -0.026412002327060924
+    },
+    "audio_pitch_energy": {
+      "validation_macro_spearman_without_group": 0.4030894015220313,
+      "validation_change_from_full": 0.002065439000151603,
+      "test_macro_spearman_without_group": 0.45448903978416394,
+      "test_change_from_full_train_only": 0.0012187604079764158
+    },
+    "audio_spectral": {
+      "validation_macro_spearman_without_group": 0.39829247552335,
+      "validation_change_from_full": -0.0027314869985297086,
+      "test_macro_spearman_without_group": 0.44516011955305484,
+      "test_change_from_full_train_only": -0.008110159823132679
+    }
+  },
+  "per_target_standardized_coefficients": [
+    {
+      "target": "openness",
+      "ranked_features": [
+        {
+          "feature": "interpersonal_warmth",
+          "coefficient": -0.13626133304197813,
+          "absolute_coefficient": 0.13626133304197813
+        },
+        {
+          "feature": "response_elaboration",
+          "coefficient": -0.13106521562378345,
+          "absolute_coefficient": 0.13106521562378345
+        },
+        {
+          "feature": "audio_duration_seconds",
+          "coefficient": -0.12746942746042278,
+          "absolute_coefficient": 0.12746942746042278
+        },
+        {
+          "feature": "social_orientation",
+          "coefficient": 0.09085257632477053,
+          "absolute_coefficient": 0.09085257632477053
+        },
+        {
+          "feature": "audio_speaking_time_ratio",
+          "coefficient": -0.07148988881000959,
+          "absolute_coefficient": 0.07148988881000959
+        },
+        {
+          "feature": "audio_pause_fraction",
+          "coefficient": 0.0714898888100095,
+          "absolute_coefficient": 0.0714898888100095
+        },
+        {
+          "feature": "audio_zero_crossing_rate",
+          "coefficient": -0.06729759343024591,
+          "absolute_coefficient": 0.06729759343024591
+        },
+        {
+          "feature": "audio_pitch_std_hz",
+          "coefficient": 0.05674229880110305,
+          "absolute_coefficient": 0.05674229880110305
+        },
+        {
+          "feature": "audio_pause_count",
+          "coefficient": -0.0454287276259149,
+          "absolute_coefficient": 0.0454287276259149
+        },
+        {
+          "feature": "audio_words_per_second",
+          "coefficient": -0.04181283551086967,
+          "absolute_coefficient": 0.04181283551086967
+        },
+        {
+          "feature": "audio_rms_mean",
+          "coefficient": -0.039059473274913166,
+          "absolute_coefficient": 0.039059473274913166
+        },
+        {
+          "feature": "assertiveness",
+          "coefficient": -0.03851905292055388,
+          "absolute_coefficient": 0.03851905292055388
+        },
+        {
+          "feature": "audio_rms_std",
+          "coefficient": 0.037740156766719594,
+          "absolute_coefficient": 0.037740156766719594
+        },
+        {
+          "feature": "certainty",
+          "coefficient": 0.03485465353325958,
+          "absolute_coefficient": 0.03485465353325958
+        },
+        {
+          "feature": "cognitive_complexity",
+          "coefficient": -0.03172311228762617,
+          "absolute_coefficient": 0.03172311228762617
+        },
+        {
+          "feature": "audio_pitch_mean_hz",
+          "coefficient": 0.01398105585062692,
+          "absolute_coefficient": 0.01398105585062692
+        },
+        {
+          "feature": "emotional_expressiveness",
+          "coefficient": -0.011833870019773098,
+          "absolute_coefficient": 0.011833870019773098
+        },
+        {
+          "feature": "negative_affect",
+          "coefficient": -0.009549176222386126,
+          "absolute_coefficient": 0.009549176222386126
+        },
+        {
+          "feature": "audio_spectral_centroid_mean_hz",
+          "coefficient": 0.0069880451749632245,
+          "absolute_coefficient": 0.0069880451749632245
+        },
+        {
+          "feature": "audio_spectral_centroid_std_hz",
+          "coefficient": -0.00467208232311541,
+          "absolute_coefficient": 0.00467208232311541
+        },
+        {
+          "feature": "question_relevance",
+          "coefficient": 0.004538942235179561,
+          "absolute_coefficient": 0.004538942235179561
+        },
+        {
+          "feature": "positive_affect",
+          "coefficient": -0.0039029005115124964,
+          "absolute_coefficient": 0.0039029005115124964
+        }
+      ]
+    },
+    {
+      "target": "conscientiousness",
+      "ranked_features": [
+        {
+          "feature": "audio_duration_seconds",
+          "coefficient": -0.09695098569451199,
+          "absolute_coefficient": 0.09695098569451199
+        },
+        {
+          "feature": "response_elaboration",
+          "coefficient": -0.09147853181305475,
+          "absolute_coefficient": 0.09147853181305475
+        },
+        {
+          "feature": "audio_words_per_second",
+          "coefficient": -0.06017906700051323,
+          "absolute_coefficient": 0.06017906700051323
+        },
+        {
+          "feature": "interpersonal_warmth",
+          "coefficient": -0.05762131352536662,
+          "absolute_coefficient": 0.05762131352536662
+        },
+        {
+          "feature": "audio_speaking_time_ratio",
+          "coefficient": -0.04444193081021972,
+          "absolute_coefficient": 0.04444193081021972
+        },
+        {
+          "feature": "audio_pause_fraction",
+          "coefficient": 0.04444193081021852,
+          "absolute_coefficient": 0.04444193081021852
+        },
+        {
+          "feature": "audio_rms_mean",
+          "coefficient": 0.03737956822473163,
+          "absolute_coefficient": 0.03737956822473163
+        },
+        {
+          "feature": "social_orientation",
+          "coefficient": 0.036571339198772555,
+          "absolute_coefficient": 0.036571339198772555
+        },
+        {
+          "feature": "audio_spectral_centroid_mean_hz",
+          "coefficient": 0.028576049646276164,
+          "absolute_coefficient": 0.028576049646276164
+        },
+        {
+          "feature": "cognitive_complexity",
+          "coefficient": -0.027575707732785476,
+          "absolute_coefficient": 0.027575707732785476
+        },
+        {
+          "feature": "audio_zero_crossing_rate",
+          "coefficient": -0.027537769086772478,
+          "absolute_coefficient": 0.027537769086772478
+        },
+        {
+          "feature": "emotional_expressiveness",
+          "coefficient": -0.017762104314739437,
+          "absolute_coefficient": 0.017762104314739437
+        },
+        {
+          "feature": "positive_affect",
+          "coefficient": -0.01664815890488985,
+          "absolute_coefficient": 0.01664815890488985
+        },
+        {
+          "feature": "question_relevance",
+          "coefficient": -0.013323033664116121,
+          "absolute_coefficient": 0.013323033664116121
+        },
+        {
+          "feature": "certainty",
+          "coefficient": 0.01296638592552149,
+          "absolute_coefficient": 0.01296638592552149
+        },
+        {
+          "feature": "audio_pitch_mean_hz",
+          "coefficient": 0.012959205717407794,
+          "absolute_coefficient": 0.012959205717407794
+        },
+        {
+          "feature": "negative_affect",
+          "coefficient": 0.012739884610141477,
+          "absolute_coefficient": 0.012739884610141477
+        },
+        {
+          "feature": "assertiveness",
+          "coefficient": -0.008841544181808608,
+          "absolute_coefficient": 0.008841544181808608
+        },
+        {
+          "feature": "audio_pitch_std_hz",
+          "coefficient": 0.006736880393005734,
+          "absolute_coefficient": 0.006736880393005734
+        },
+        {
+          "feature": "audio_rms_std",
+          "coefficient": 0.003546118862338087,
+          "absolute_coefficient": 0.003546118862338087
+        },
+        {
+          "feature": "audio_pause_count",
+          "coefficient": 0.002595096328534211,
+          "absolute_coefficient": 0.002595096328534211
+        },
+        {
+          "feature": "audio_spectral_centroid_std_hz",
+          "coefficient": -0.00033537458372843553,
+          "absolute_coefficient": 0.00033537458372843553
+        }
+      ]
+    },
+    {
+      "target": "extraversion",
+      "ranked_features": [
+        {
+          "feature": "interpersonal_warmth",
+          "coefficient": -0.1408115424780064,
+          "absolute_coefficient": 0.1408115424780064
+        },
+        {
+          "feature": "audio_duration_seconds",
+          "coefficient": -0.09698164277556834,
+          "absolute_coefficient": 0.09698164277556834
+        },
+        {
+          "feature": "audio_words_per_second",
+          "coefficient": -0.06904995289152346,
+          "absolute_coefficient": 0.06904995289152346
+        },
+        {
+          "feature": "audio_zero_crossing_rate",
+          "coefficient": -0.06590730828282657,
+          "absolute_coefficient": 0.06590730828282657
+        },
+        {
+          "feature": "audio_speaking_time_ratio",
+          "coefficient": -0.06149957549905753,
+          "absolute_coefficient": 0.06149957549905753
+        },
+        {
+          "feature": "audio_pause_fraction",
+          "coefficient": 0.06149957549905501,
+          "absolute_coefficient": 0.06149957549905501
+        },
+        {
+          "feature": "response_elaboration",
+          "coefficient": -0.05018488038396446,
+          "absolute_coefficient": 0.05018488038396446
+        },
+        {
+          "feature": "social_orientation",
+          "coefficient": 0.04780206689053047,
+          "absolute_coefficient": 0.04780206689053047
+        },
+        {
+          "feature": "certainty",
+          "coefficient": 0.03736930798417727,
+          "absolute_coefficient": 0.03736930798417727
+        },
+        {
+          "feature": "negative_affect",
+          "coefficient": -0.03577072016143669,
+          "absolute_coefficient": 0.03577072016143669
+        },
+        {
+          "feature": "audio_rms_mean",
+          "coefficient": -0.0331809773974623,
+          "absolute_coefficient": 0.0331809773974623
+        },
+        {
+          "feature": "positive_affect",
+          "coefficient": -0.03154477127946433,
+          "absolute_coefficient": 0.03154477127946433
+        },
+        {
+          "feature": "cognitive_complexity",
+          "coefficient": -0.028592197560457035,
+          "absolute_coefficient": 0.028592197560457035
+        },
+        {
+          "feature": "audio_spectral_centroid_mean_hz",
+          "coefficient": -0.025721062933044082,
+          "absolute_coefficient": 0.025721062933044082
+        },
+        {
+          "feature": "assertiveness",
+          "coefficient": -0.021621320501953104,
+          "absolute_coefficient": 0.021621320501953104
+        },
+        {
+          "feature": "audio_pitch_std_hz",
+          "coefficient": 0.02029885485017143,
+          "absolute_coefficient": 0.02029885485017143
+        },
+        {
+          "feature": "question_relevance",
+          "coefficient": -0.018557531541380408,
+          "absolute_coefficient": 0.018557531541380408
+        },
+        {
+          "feature": "emotional_expressiveness",
+          "coefficient": -0.018442280952965795,
+          "absolute_coefficient": 0.018442280952965795
+        },
+        {
+          "feature": "audio_pitch_mean_hz",
+          "coefficient": -0.012193546025056349,
+          "absolute_coefficient": 0.012193546025056349
+        },
+        {
+          "feature": "audio_rms_std",
+          "coefficient": 0.011343616283302604,
+          "absolute_coefficient": 0.011343616283302604
+        },
+        {
+          "feature": "audio_spectral_centroid_std_hz",
+          "coefficient": -0.006202148963097165,
+          "absolute_coefficient": 0.006202148963097165
+        },
+        {
+          "feature": "audio_pause_count",
+          "coefficient": 0.004616162151576462,
+          "absolute_coefficient": 0.004616162151576462
+        }
+      ]
+    },
+    {
+      "target": "agreeableness",
+      "ranked_features": [
+        {
+          "feature": "audio_duration_seconds",
+          "coefficient": -0.1757543830560201,
+          "absolute_coefficient": 0.1757543830560201
+        },
+        {
+          "feature": "response_elaboration",
+          "coefficient": -0.11249994212832218,
+          "absolute_coefficient": 0.11249994212832218
+        },
+        {
+          "feature": "interpersonal_warmth",
+          "coefficient": -0.11165081228624672,
+          "absolute_coefficient": 0.11165081228624672
+        },
+        {
+          "feature": "social_orientation",
+          "coefficient": 0.09854357206823214,
+          "absolute_coefficient": 0.09854357206823214
+        },
+        {
+          "feature": "audio_speaking_time_ratio",
+          "coefficient": -0.08141052153072911,
+          "absolute_coefficient": 0.08141052153072911
+        },
+        {
+          "feature": "audio_pause_fraction",
+          "coefficient": 0.08141052153072849,
+          "absolute_coefficient": 0.08141052153072849
+        },
+        {
+          "feature": "audio_words_per_second",
+          "coefficient": -0.07659080375462375,
+          "absolute_coefficient": 0.07659080375462375
+        },
+        {
+          "feature": "audio_zero_crossing_rate",
+          "coefficient": -0.07420288696144031,
+          "absolute_coefficient": 0.07420288696144031
+        },
+        {
+          "feature": "audio_rms_std",
+          "coefficient": 0.06892205028181979,
+          "absolute_coefficient": 0.06892205028181979
+        },
+        {
+          "feature": "audio_rms_mean",
+          "coefficient": -0.0632363591087589,
+          "absolute_coefficient": 0.0632363591087589
+        },
+        {
+          "feature": "cognitive_complexity",
+          "coefficient": -0.047092634901102395,
+          "absolute_coefficient": 0.047092634901102395
+        },
+        {
+          "feature": "emotional_expressiveness",
+          "coefficient": -0.04255498100925812,
+          "absolute_coefficient": 0.04255498100925812
+        },
+        {
+          "feature": "audio_spectral_centroid_std_hz",
+          "coefficient": 0.026676563055387334,
+          "absolute_coefficient": 0.026676563055387334
+        },
+        {
+          "feature": "assertiveness",
+          "coefficient": 0.022829863285300584,
+          "absolute_coefficient": 0.022829863285300584
+        },
+        {
+          "feature": "question_relevance",
+          "coefficient": -0.01887418448064252,
+          "absolute_coefficient": 0.01887418448064252
+        },
+        {
+          "feature": "positive_affect",
+          "coefficient": -0.012057576802059516,
+          "absolute_coefficient": 0.012057576802059516
+        },
+        {
+          "feature": "certainty",
+          "coefficient": 0.010673357200820377,
+          "absolute_coefficient": 0.010673357200820377
+        },
+        {
+          "feature": "negative_affect",
+          "coefficient": -0.010275318560083362,
+          "absolute_coefficient": 0.010275318560083362
+        },
+        {
+          "feature": "audio_spectral_centroid_mean_hz",
+          "coefficient": -0.0067108575278214426,
+          "absolute_coefficient": 0.0067108575278214426
+        },
+        {
+          "feature": "audio_pitch_mean_hz",
+          "coefficient": 0.0036813059865906687,
+          "absolute_coefficient": 0.0036813059865906687
+        },
+        {
+          "feature": "audio_pause_count",
+          "coefficient": 0.0036229788815526267,
+          "absolute_coefficient": 0.0036229788815526267
+        },
+        {
+          "feature": "audio_pitch_std_hz",
+          "coefficient": 0.003306186191135006,
+          "absolute_coefficient": 0.003306186191135006
+        }
+      ]
+    },
+    {
+      "target": "neuroticism",
+      "ranked_features": [
+        {
+          "feature": "audio_zero_crossing_rate",
+          "coefficient": 0.05678256170610633,
+          "absolute_coefficient": 0.05678256170610633
+        },
+        {
+          "feature": "audio_words_per_second",
+          "coefficient": 0.05219694232373852,
+          "absolute_coefficient": 0.05219694232373852
+        },
+        {
+          "feature": "response_elaboration",
+          "coefficient": 0.03932167782547258,
+          "absolute_coefficient": 0.03932167782547258
+        },
+        {
+          "feature": "audio_duration_seconds",
+          "coefficient": 0.036424630293007375,
+          "absolute_coefficient": 0.036424630293007375
+        },
+        {
+          "feature": "positive_affect",
+          "coefficient": 0.034186268487983375,
+          "absolute_coefficient": 0.034186268487983375
+        },
+        {
+          "feature": "audio_spectral_centroid_mean_hz",
+          "coefficient": -0.03323701317095789,
+          "absolute_coefficient": 0.03323701317095789
+        },
+        {
+          "feature": "audio_pause_count",
+          "coefficient": -0.03169704470415556,
+          "absolute_coefficient": 0.03169704470415556
+        },
+        {
+          "feature": "cognitive_complexity",
+          "coefficient": 0.02714196617350602,
+          "absolute_coefficient": 0.02714196617350602
+        },
+        {
+          "feature": "audio_spectral_centroid_std_hz",
+          "coefficient": -0.024243117785608673,
+          "absolute_coefficient": 0.024243117785608673
+        },
+        {
+          "feature": "interpersonal_warmth",
+          "coefficient": 0.022975151430185872,
+          "absolute_coefficient": 0.022975151430185872
+        },
+        {
+          "feature": "audio_pause_fraction",
+          "coefficient": -0.022550206629774014,
+          "absolute_coefficient": 0.022550206629774014
+        },
+        {
+          "feature": "audio_speaking_time_ratio",
+          "coefficient": 0.022550206629773233,
+          "absolute_coefficient": 0.022550206629773233
+        },
+        {
+          "feature": "assertiveness",
+          "coefficient": -0.0203158330639313,
+          "absolute_coefficient": 0.0203158330639313
+        },
+        {
+          "feature": "audio_pitch_std_hz",
+          "coefficient": 0.017833164109873925,
+          "absolute_coefficient": 0.017833164109873925
+        },
+        {
+          "feature": "emotional_expressiveness",
+          "coefficient": -0.013776614420317773,
+          "absolute_coefficient": 0.013776614420317773
+        },
+        {
+          "feature": "social_orientation",
+          "coefficient": -0.013541676538938159,
+          "absolute_coefficient": 0.013541676538938159
+        },
+        {
+          "feature": "negative_affect",
+          "coefficient": 0.012007177884638943,
+          "absolute_coefficient": 0.012007177884638943
+        },
+        {
+          "feature": "question_relevance",
+          "coefficient": 0.0107863590567168,
+          "absolute_coefficient": 0.0107863590567168
+        },
+        {
+          "feature": "certainty",
+          "coefficient": -0.005549505012817228,
+          "absolute_coefficient": 0.005549505012817228
+        },
+        {
+          "feature": "audio_rms_std",
+          "coefficient": 0.0036097959441800972,
+          "absolute_coefficient": 0.0036097959441800972
+        },
+        {
+          "feature": "audio_rms_mean",
+          "coefficient": 0.00110442190455803,
+          "absolute_coefficient": 0.00110442190455803
+        },
+        {
+          "feature": "audio_pitch_mean_hz",
+          "coefficient": 0.00014729401610552123,
+          "absolute_coefficient": 0.00014729401610552123
+        }
+      ]
+    }
+  ],
+  "interpretation": "Exploratory post-selection diagnostics. These results identify concentration and redundancy; they do not retune the selected model or establish causal feature effects."
+}

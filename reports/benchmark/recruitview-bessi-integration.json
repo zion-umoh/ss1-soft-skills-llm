@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "input_model1_predictions": "outputs/benchmark/recruitview-feature-fusion/predictions.csv",
+  "model2_artifact": "outputs/models/model2_linear_benchmark.joblib",
+  "rows": 292,
+  "trait_mapping": "standardise RecruitView training-label predictions, then map to BFI-2 training mean/std and clip to 0\u20131",
+  "estimated_targets": [
+    "bessi_self_management",
+    "bessi_social_engagement",
+    "bessi_cooperation",
+    "bessi_emotional_resilience",
+    "bessi_innovation"
+  ],
+  "speaking_skills_proxy_spearman": {
+    "bessi_self_management": 0.4695141201439862,
+    "bessi_social_engagement": 0.476759878750768,
+    "bessi_cooperation": 0.4823124058012653,
+    "bessi_emotional_resilience": 0.45246419897347473,
+    "bessi_innovation": 0.4846601800428427
+  },
+  "interpretation_boundary": "These are BESSI estimates generated from predicted Big Five traits. RecruitView has no BESSI ground truth; correlations with speaking_skills are proxy/convergent evidence only.",
+  "output": "outputs/benchmark/recruitview-bessi/estimates.csv"
+}

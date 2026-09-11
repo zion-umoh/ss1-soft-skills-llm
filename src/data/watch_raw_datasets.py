@@ -17,7 +17,7 @@ def snapshot(data_root: Path) -> dict[Path, tuple[int, int]]:
     return {
         path: (path.stat().st_size, path.stat().st_mtime_ns)
         for path in data_root.rglob("*")
-        if path.is_file() and path.suffix.lower() in {".csv", ".tsv", ".xlsx"}
+        if path.is_file() and path.suffix.lower() in {".csv", ".tsv", ".jsonl", ".xlsx"}
     }
 
 

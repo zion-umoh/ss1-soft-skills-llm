@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "reference": {
+    "paper": "Gupta et al. (2025), RecruitView, arXiv:2512.00450",
+    "configuration": "CRMF (VideoMAE + Wav2Vec2)",
+    "metric": "Spearman rho",
+    "big_five": {
+      "openness": 0.6384,
+      "conscientiousness": 0.5572,
+      "extraversion": 0.5681,
+      "agreeableness": 0.5927,
+      "neuroticism": 0.2603
+    },
+    "speaking_skills": 0.5947
+  },
+  "ours": {
+    "model_report": "reports/benchmark/recruitview-feature-fusion.json",
+    "selected_variant": "llm_fused",
+    "metric": "participant-disjoint test Spearman rho",
+    "big_five": {
+      "openness": 0.5099381558382708,
+      "conscientiousness": 0.4637912095594306,
+      "extraversion": 0.4833113304811399,
+      "agreeableness": 0.4833180783438749,
+      "neuroticism": 0.31873867021811847
+    },
+    "speaking_skills": 0.4858579256783016
+  },
+  "difference_ours_minus_paper": {
+    "big_five": {
+      "openness": -0.12846184416172912,
+      "conscientiousness": -0.09340879044056943,
+      "extraversion": -0.08478866951886016,
+      "agreeableness": -0.10938192165612509,
+      "neuroticism": 0.058438670218118494
+    },
+    "speaking_skills": -0.1088420743216984
+  },
+  "interpretation": "Contextual comparison only: the paper uses its own multimodal CRMF model, split and full target set, whereas this study uses a participant-disjoint local split, engineered audio columns, an LLM-assisted structured text representation and a selected Ridge variant after excluding empty transcripts."
+}

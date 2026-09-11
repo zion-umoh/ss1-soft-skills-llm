@@ -19,7 +19,7 @@ Maintain [dataset-provenance.json](../data/metadata/dataset-provenance.json) for
 - download date;
 - intended role in the research pipeline.
 
-The Essays dataset currently has unresolved provenance fields. Do not mark its preparation complete until these are verified.
+RecruitView and BFI-2/BESSI provenance must be complete before their derived tables are used in analysis.
 
 ## Raw-data audit
 
@@ -29,7 +29,7 @@ Start the project-local watcher from the project root while working with raw dat
 make watch-data
 ```
 
-The watcher runs an initial audit and refreshes [raw-data-inventory.json](../data/metadata/raw-data-inventory.json) after CSV or TSV files are added or changed. It stops with `Ctrl+C` or when its terminal closes. The inventory records the row count, schema, file size, modification time and SHA-256 checksum for each raw CSV/TSV; comparing checksums confirms that raw source files have not changed.
+The watcher runs an initial audit and refreshes [raw-data-inventory.json](../data/metadata/raw-data-inventory.json) after CSV, TSV, JSONL or XLSX files are added or changed. It stops with `Ctrl+C` or when its terminal closes. The inventory records the row count, schema, file size, modification time and SHA-256 checksum for each raw tabular file; comparing checksums confirms that raw source files have not changed.
 
 For a one-off audit, run `make audit-data`.
 

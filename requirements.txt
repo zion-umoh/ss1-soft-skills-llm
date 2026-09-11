@@ -1,7 +1,11 @@
 # Used to read the downloaded BFI-2/BESSI source workbooks during preparation.
 openpyxl==3.1.5
 scikit-learn==1.7.2
+# Small cached-feature fusion experiment (also used by pretrained encoders).
+torch==2.13.0
 # Pretrained semantic embeddings for the Model 1 embedding ablation.
 sentence-transformers==6.0.1
-# Official client for project-scoped OpenAI Batch submission and retrieval.
+# Pretrained WavLM speech embeddings for the audio branch.
+transformers==5.16.1
+# OpenAI API client for resumable LLM-assisted text feature extraction.
 openai==3.7.0

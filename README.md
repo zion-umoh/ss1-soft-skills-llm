@@ -1,114 +1,83 @@
-# Personality Traits and Emotion Recognition for Soft-Skill Prediction Using LLMs
+# Interview Features → Big Five → BESSI Skills
 
-MSc Advanced R&D Project — **SS1**
+MSc Advanced R&D dissertation project.
 
-## Overview
+The compact study is closed for model expansion. Start with the [plain-English dissertation handoff](docs/dissertation-handoff.md) and [final evaluation](reports/benchmark/recruitview-final-review.md) for the conclusion, evidence, and remaining submission tasks.
 
-This project investigates whether a written response to a scenario can be used to infer a person's Big Five personality traits and, subsequently, predict selected behavioural, emotional and social skills.
+## Research question
 
-The project uses only existing public or anonymised secondary datasets. It does not recruit participants or collect new personal data.
+Can transcript representations and engineered vocal-delivery features from interview responses predict Big Five personality traits, and can those predicted traits be used to estimate related behavioural, emotional and social skills represented by BESSI?
 
-## Research pipeline
-
-1. **Scenario design** — generate and evaluate scenario-based questions that elicit observable soft-skill behaviour.
-2. **Model 1: text to Big Five** — predict Big Five personality traits from written text using semantic, emotion and emotion-regulation features.
-3. **Model 2: Big Five to BESSI skills** — predict selected BESSI soft-skill outcomes from Big Five personality inputs.
-4. **Integration and evaluation** — connect the two models and report performance, limitations and appropriate use boundaries.
-
-## Datasets
-
-| Dataset | Purpose | Pipeline stage |
-| --- | --- | --- |
-| Essays | Written text with Big Five labels | Model 1 primary dataset |
-| GoEmotions | Text labelled with 27 emotions plus neutral | Model 1 emotion-recognition support |
-| BFI-2 | Big Five questionnaire responses | Model 2 input |
-| BESSI | Behavioural, emotional and social skill measures | Model 2 target |
-| Measure What Matters | Situational-judgement-test reference material | Scenario design and evaluation |
-
-RecruitView is an optional external benchmark only if access is granted; it is not part of the core pipeline.
-
-## Model 1: current scope
-
-**Goal:** build an emotion-aware Big Five prediction model from written text.
-
-**Inputs**
-
-- Essay text
-- Linguistic/semantic features
-- Emotion and emotion-regulation features
-
-**Outputs**
-
-- Predictions for Openness, Conscientiousness, Extraversion, Agreeableness and Neuroticism
-
-**Evaluation principles**
-
-- Fixed, documented train/validation/test splits
-- No data leakage between splits
-- Reproducible preprocessing and random seeds
-- Baseline models and ablation tests
-- Held-out evaluation with stage-specific reporting
-
-## Repository structure
+## Active pipeline
 
 ```text
-data/          Raw, interim and processed datasets
-notebooks/     Exploratory analysis and experiments
-src/           Reusable data, feature, model and evaluation code
-outputs/       Figures, tables and saved models
-docs/          Methodology and scenario-design materials
-tests/         Validation tests for reusable code
+RecruitView interview
+  → transcript representation + engineered audio-characteristic columns
+  → modern supervised Big Five predictor
+  → predicted Big Five profile
+  → BFI-2/BESSI mapping model
+  → estimated BESSI skill domains
 ```
 
-Raw datasets are retained unchanged in `data/raw/`. Cleaned and model-ready files are written to `data/processed/`.
+Raw audio is not passed directly to the predictors. The audio is processed into documented columns such as speech rate, pause behaviour, pitch and energy statistics, duration and voice-quality summaries.
 
-## Status
+There is also a separate direct benchmark:
 
-Week 4 benchmarking is complete for both model stages. Model 1's locked Luna retrieval method matched the adapted Piastra-style zero-shot benchmark on test AUROC while improving fixed-threshold F1; Model 2 selected the linear benchmark over Extra Trees and has one-time held-out test results. See [Model 1 comparison](reports/model-evaluation/model1-comparison-report.md), [Model 2 comparison](reports/model-evaluation/model2-comparison-report.md), and the detailed [Model 1 benchmarking record](docs/model1-benchmarking-record.md).
+```text
+RecruitView features → direct speaking_skills predictor
+                  → final comparison with the published RecruitView method
+```
 
-Week 5 adds a curated, user-selected scenario-instrument pipeline: a mapped scenario bank generates candidates, a literature-based rubric evaluates them, weak candidates receive one deterministic revision, and only a balanced passing instrument is released. It does not alter either locked model or establish psychometric validity. See [the scenario methodology and release gate](docs/scenario-instrument-pipeline.md).
+The direct target is `speaking_skills`. RecruitView does not contain BESSI labels, so it cannot directly validate the BESSI outputs.
 
-## Data preparation commands
+## Data
 
-Run these from the repository root:
+| Dataset | Purpose |
+| --- | --- |
+| RecruitView | Interview transcript/audio characteristics and Big Five plus `speaking_skills` labels |
+| BFI-2/BESSI | Train and evaluate the Big Five → BESSI mapping |
+
+RecruitView evaluations use participant-disjoint splits. Model 2 uses a row-level split because the source identifier is non-unique; its results are exploratory. The original RecruitView test has already been inspected, so subsequent extensions are labelled exploratory and select settings using development participants only.
+
+## Model plan
+
+Model 1 compares the frozen transformer baseline with an explicit OpenAI LLM-assisted text-feature extractor and engineered audio columns. Text-only, LLM-text-only, engineered-audio-only, simple-concatenation and validation-tuned late-fusion variants are compared. The LLM returns structured observable linguistic and affective features; it is not asked to output Big Five or BESSI labels directly. Late fusion trains the text and audio regressors separately and blends their predictions using validation data only.
+
+The extended audio experiment adds a pretrained WavLM speech embedding. It is extracted from five-second audio chunks with a resumable checkpoint, then compared as a speech-only branch and as a leakage-safe LLM-text + engineered-audio + speech-embedding fusion branch. The waveform itself is never passed to the Ridge predictor.
+
+Model 2 is a separately trained multi-output mapping from the five Big Five traits to five BESSI domains. Its outputs are estimates, not deterministic conversions or psychological diagnoses.
+
+The small gated-fusion follow-up reuses the 10 cached LLM text features and 12 engineered audio features. Separate 16-unit projections feed either fixed or learned weighting and a small shared prediction head. It compares squared error, Huber loss, and Huber plus a training-pair ranking loss over three participant-grouped development folds and three fixed random seeds. Model choice is saved before scoring the historical test. No new API calls are needed.
+
+The development-selected gated model scored 0.4592 Big Five / 0.4551 speaking correlation on the historical test, against 0.4519 / 0.4859 for a matched Ridge refit. Participant-bootstrap intervals do not establish an improvement. The original primary pipeline is retained. See [the follow-up report](reports/benchmark/recruitview-gated-fusion.md). Artifacts and resumable fold checkpoints are saved separately under `outputs/benchmark/recruitview-gated-fusion/`; a changed protocol or input requires a new output directory.
+
+## Implementation order
+
+The complete ordered plan is in [docs/recruitview-bessi-implementation-plan.md](docs/recruitview-bessi-implementation-plan.md). Batch 0 leaves one active RecruitView → Big Five → BESSI pipeline before new modelling begins.
+
+## Useful commands
 
 ```bash
-# Update the inventory of immutable raw CSV files.
+hf download AI4A-lab/RecruitView --repo-type dataset --local-dir data/raw/recruitview --include 'videos/*.mp4'
 make audit-data
-
-# Monitor raw CSV files while working; the inventory refreshes after changes.
-make watch-data
-
-# Prepare the Essays audit artefacts and leakage-safe Model 1 splits.
-make prepare-essays
-
-# Prepare agreement-filtered GoEmotions artefacts and leakage-safe Model 1 splits.
-make prepare-goemotions
-
-# Create the project environment once before training models.
-python3 -m venv .venv
-.venv/bin/pip install -r requirements.txt
-
-# Train the text-only GoEmotions model and write Essays emotion features.
-make train-goemotions
-
-# Build the fixed three-skill reference instrument.
-# Demo outputs use `demo_` filenames and never overwrite live-named audit files.
-make generate-scenarios-demo
-
-# Build a selected-skill instrument interactively from the curated bank.
-make scenarios
-
-# Run preparation-pipeline tests.
+make prepare-recruitview
+make extract-recruitview-audio
+make extract-recruitview-llm-features
+make extract-recruitview-speech-embeddings
+make train-model1-feature-fusion
+make train-model1-gated-fusion
+make close-recruitview-study
+make analyse-recruitview-feature-balance
+make integrate-recruitview-bessi
+make compare-recruitview-paper
+make prepare-bfi2-bessi
+make prepare-bfi2-bessi-facets
+make train-model2-benchmark
+make train-model2-improved
+make evaluate-model2-selected
 make test
 ```
 
-Generated data-quality reports and derived datasets are reproducible local artefacts; the source files and scripts remain in the repository.
+## Responsible-use boundary
 
-## Expected deliverables
-
-- Released scenario-design module with a reproducible content pre-screen
-- Model 1 personality-prediction results
-- Model 2 soft-skill-prediction results
-- Integrated pipeline and final evaluation
-- Dissertation, code and results package
+This is a research prototype. It must not be used for automated hiring, diagnosis, ranking people, or claims that a short interview objectively measures a person’s true soft skills.

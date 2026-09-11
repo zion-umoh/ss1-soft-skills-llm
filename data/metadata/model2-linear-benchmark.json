@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-01T09:04:41.899933Z",
+  "generated_at_utc": "2026-09-11T07:59:37.785757Z",
   "benchmark": "transparent multi-output ordinary least squares linear regression",
   "feature_columns": [
     "big_five_extraversion",

@@ -38,6 +38,26 @@ def delimited_summary(path: Path) -> tuple[list[str], int]:
         return header, sum(1 for _ in reader)
 
 
+def jsonl_summary(path: Path) -> tuple[list[str], int]:
+    """Return the first JSON object's keys and the number of non-empty rows."""
+    header: list[str] = []
+    row_count = 0
+    with path.open("r", encoding="utf-8") as stream:
+        for line_number, line in enumerate(stream, start=1):
+            if not line.strip():
+                continue
+            try:
+                value = json.loads(line)
+            except json.JSONDecodeError as error:
+                raise ValueError(f"Invalid JSONL at {path}:{line_number}") from error
+            if not isinstance(value, dict):
+                raise ValueError(f"Expected a JSON object at {path}:{line_number}")
+            if not header:
+                header = list(value)
+            row_count += 1
+    return header, row_count
+
+
 def workbook_summary(path: Path) -> tuple[list[str], int, dict[str, object]]:
     """Return the first-sheet schema and all-sheet dimensions without modifying XLSX."""
     workbook = load_workbook(path, read_only=True, data_only=False)
@@ -62,11 +82,14 @@ def audit(data_root: Path) -> list[dict[str, object]]:
     paths = sorted(
         path
         for path in data_root.rglob("*")
-        if path.is_file() and path.suffix.lower() in {".csv", ".tsv", ".xlsx"}
+        if path.is_file() and path.suffix.lower() in {".csv", ".tsv", ".jsonl", ".xlsx"}
     )
     for path in paths:
         if path.suffix.lower() == ".xlsx":
             header, row_count, sheets = workbook_summary(path)
+        elif path.suffix.lower() == ".jsonl":
+            header, row_count = jsonl_summary(path)
+            sheets = None
         else:
             header, row_count = delimited_summary(path)
             sheets = None
