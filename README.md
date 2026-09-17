@@ -4,6 +4,19 @@ MSc Advanced R&D dissertation project.
 
 The compact study is closed for model expansion. Start with the [plain-English dissertation handoff](docs/dissertation-handoff.md) and [final evaluation](reports/benchmark/recruitview-final-review.md) for the conclusion, evidence, and remaining submission tasks.
 
+## Repository map
+
+- `src/data/` — dataset preparation and cached feature extraction.
+- `src/models/` — Model 1 interview predictor and Model 2 Big Five-to-BESSI mapping.
+- `src/evaluation/` — diagnostics, paper comparison, integration and closing analysis.
+- `data/metadata/` — provenance, schemas and split/audit records.
+- `data/processed/` — reproducible derived tables (raw data remains in `data/raw/`).
+- `outputs/benchmark/` — retained predictions, estimates and exploratory gated-fusion checkpoints.
+- `reports/benchmark/` — final evidence and benchmark reports.
+- `docs/` — ethics, governance, implementation plan and dissertation handoff.
+- `outputs/poster/` — final poster PDF and editable PowerPoint.
+- `archive/legacy/` — ignored earlier experiments kept only for recovery.
+
 ## Research question
 
 Can transcript representations and engineered vocal-delivery features from interview responses predict Big Five personality traits, and can those predicted traits be used to estimate related behavioural, emotional and social skills represented by BESSI?
@@ -71,7 +84,6 @@ make analyse-recruitview-feature-balance
 make integrate-recruitview-bessi
 make compare-recruitview-paper
 make prepare-bfi2-bessi
-make prepare-bfi2-bessi-facets
 make train-model2-benchmark
 make train-model2-improved
 make evaluate-model2-selected

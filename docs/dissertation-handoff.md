@@ -71,7 +71,7 @@ Performance varied across duration and question groups. Only two question groups
 
 Run `make close-recruitview-study` to regenerate the closing analysis and `make test` for the retained test suite. The closing JSON records input and primary-artifact hashes. Raw data and fitted models were preserved. All follow-up scores on the historical test must be described as exploratory; repeated checks cannot make it untouched again.
 
-The existing FigJam was reduced to four main steps, two supporting branches and two summary cards. Its structure is saved. The screenshot revealed clipped title/summary text; the final resizing operation was blocked by the Figma Starter MCP limit. Browser access was signed out, and native Chrome access required unavailable macOS permissions. The remaining layout task is to shorten the title and enlarge the two bottom text cards. The pre-simplification node/text snapshot is retained in `figjam-before-simplification.xml`; Figma version history is the recovery route for the visual layout.
+The current FigJam board is the source of truth for the four-step pipeline and project-status diagram. Older poster-build files and board snapshots are preserved outside the active tree under `archive/legacy/`.
 
 ## Completion boundary
 

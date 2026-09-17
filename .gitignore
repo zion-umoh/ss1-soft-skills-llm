@@ -17,5 +17,12 @@ outputs/benchmark/
 # Python bytecode
 __pycache__/
 
+# Local build scratch and generated chart workbooks
+tmp/
+.chart-data-*/
+
+# Locally preserved legacy experiments (not part of the active study)
+archive/legacy/
+
 # macOS Finder metadata
 .DS_Store

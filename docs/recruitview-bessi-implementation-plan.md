@@ -195,7 +195,7 @@ This extension was proposed after the original test results had been inspected. 
 
 **Dependency:** Batch 0.
 
-**Existing entry points:** `make prepare-bfi2-bessi` and `make prepare-bfi2-bessi-facets`.
+**Existing entry point:** `make prepare-bfi2-bessi`.
 
 **Tasks**
 
